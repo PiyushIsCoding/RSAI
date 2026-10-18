@@ -688,7 +688,12 @@ function toggleQuizOption(idx) {
 }
 
 function shouldUseSubmitButton(q) {
-  return q.multiSelect || q.numeric === true || q.type === 'numeric' || q.inputType === 'number';
+  return q.multiSelect || isNumericQuestion(q);
+}
+
+function isNumericQuestion(q) {
+  if (q.numeric === true || q.type === 'numeric' || q.inputType === 'number') return true;
+  return /\b(calculate|compute|estimate|formula|how many|numerical|numeric|round to|what is the value)\b/i.test(q.question);
 }
 
 function submitQuizAnswer() {
