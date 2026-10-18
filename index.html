@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="RSAI Recall — Responsible & Safe AI Exam Practice. Browse week-by-week questions, toggle instant answers, and attempt customizable multi-week randomized quizzes.">
+  <title>Week 1: AI capabilities & risks — RSAI Recall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <div class="brand-logo">
+            <span class="brand-r">r.</span> recall
+          </div>
+          <button class="theme-toggle" title="Responsible & Safe AI" aria-label="Course Info">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="course-selector">
+          <span class="course-name">Responsible & Safe AI Systems</span>
+        </div>
+
+        <div class="year-selector-box">
+          <label class="year-label" for="sidebarYearSelect">SELECT YEAR / PYQ</label>
+          <div class="select-wrapper">
+            <select id="sidebarYearSelect" class="year-select" onchange="onSidebarYearChange(this.value)">
+              <option value="2026" selected>2026 (This Year / Current)</option>
+              <option value="2025">2025 PYQs</option>
+              <option value="2024">2024 PYQs</option>
+              <option value="all">All Years (2024 - 2026)</option>
+            </select>
+            <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEKS NAVIGATION -->
+      <nav class="weeks-nav" id="weeksNav">
+        <!-- Dynamically generated week list -->
+      </nav>
+
+      <!-- SIDEBAR FOOTER (QUIZ BUTTON) -->
+      <div class="sidebar-footer">
+        <button class="sidebar-quiz-btn" id="openQuizBtn" onclick="openQuizModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 3 21 3 21 8" />
+            <line x1="4" y1="20" x2="21" y2="3" />
+            <polyline points="21 16 21 21 16 21" />
+            <line x1="15" y1="15" x2="21" y2="21" />
+            <line x1="4" y1="4" x2="9" y2="9" />
+          </svg>
+          <span>Quiz</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT VIEWPORT -->
+    <main class="main-content" id="mainContent">
+      <!-- MOBILE TOPBAR -->
+      <div class="mobile-topbar">
+        <button class="menu-btn" onclick="toggleSidebar()" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+        <span class="mobile-brand"><span class="brand-r">r.</span> recall</span>
+        <button class="mobile-quiz-btn" onclick="openQuizModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8" />
+            <line x1="4" y1="20" x2="21" y2="3" />
+            <polyline points="21 16 21 21 16 21" />
+            <line x1="15" y1="15" x2="21" y2="21" />
+          </svg>
+          Quiz
+        </button>
+      </div>
+
+      <!-- BROWSE VIEW (DEFAULT WEEK-BY-WEEK VIEW) -->
+      <section class="view active" id="browseView">
+        <header class="browse-header">
+          <div class="browse-title-group">
+            <h1 class="week-heading" id="currentWeekHeading">
+              Week 1<span class="dot-accent">.</span>
+            </h1>
+            <p class="week-topic" id="currentWeekTopic">AI capabilities & risks</p>
+          </div>
+
+          <div class="browse-controls">
+            <!-- Source filter -->
+            <div class="source-pills" id="browseSourceFilter">
+              <button class="source-pill active" data-source="assignment" onclick="setBrowseSource('assignment')">
+                Assignments
+              </button>
+              <button class="source-pill" data-source="all" onclick="setBrowseSource('all')">
+                All (+ Notes)
+              </button>
+            </div>
+
+            <!-- Show answers toggle switch -->
+            <div class="answer-toggle-group">
+              <label class="switch-label" for="showAnswersSwitch">
+                <span class="switch-text">Show answers</span>
+                <div class="switch">
+                  <input type="checkbox" id="showAnswersSwitch" onchange="toggleShowAnswers(this.checked)">
+                  <span class="slider"></span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Year indicator & Question count -->
+            <div class="count-indicators">
+              <span class="year-badge" id="browseYearBadge">2026 (This Year)</span>
+              <span class="q-count-badge" id="browseCountBadge">12 questions</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Question Cards List -->
+        <div class="questions-stream" id="questionsStream">
+          <!-- Dynamically populated question cards -->
+        </div>
+      </section>
+
+      <!-- QUIZ MODE VIEW -->
+      <section class="view" id="quizView">
+        <div class="quiz-interface">
+          <!-- Quiz Top Bar -->
+          <div class="quiz-nav-bar">
+            <button class="btn-subtle" onclick="exitQuiz()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Exit to Browse
+            </button>
+
+            <div class="quiz-tracker">
+              <span class="q-progress-text" id="quizProgressText">Question 1 of 20</span>
+              <div class="q-progress-track">
+                <div class="q-progress-bar" id="quizProgressBar"></div>
+              </div>
+            </div>
+
+            <div class="quiz-live-score">
+              <span class="score-good" id="quizScoreCorrect">0</span>
+              <span class="score-sep">/</span>
+              <span class="score-total" id="quizScoreAnswered">0</span>
+            </div>
+          </div>
+
+          <!-- Review Banner (Hidden during normal quiz) -->
+          <div class="review-status-bar" id="reviewStatusBar" style="display: none;">
+            <span>🔍 <strong>Review Mode:</strong> Shuffled answers and explanations revealed.</span>
+            <button class="btn-subtle" onclick="showResultsView()">Back to Results</button>
+          </div>
+
+          <!-- Active Question Card -->
+          <div class="quiz-card" id="quizCard">
+            <div class="quiz-card-meta">
+              <span class="meta-tag" id="quizWeekTag">Week 1</span>
+              <span class="meta-tag" id="quizSourceTag">Assignment</span>
+              <span class="meta-tag highlight" id="quizTypeTag">Single Choice</span>
+            </div>
+
+            <div class="quiz-card-body">
+              <div class="quiz-q-num" id="quizQNum">01</div>
+              <h2 class="quiz-q-text" id="quizQText">Loading question...</h2>
+            </div>
+
+            <!-- Shuffled Options Container -->
+            <div class="quiz-options-list" id="quizOptionsList">
+              <!-- Shuffled options injected here -->
+            </div>
+
+            <!-- Quiz Card Actions -->
+            <div class="quiz-card-actions">
+              <button class="btn-action btn-submit" id="quizSubmitBtn" onclick="submitQuizAnswer()" disabled>
+                Submit Answer
+              </button>
+            </div>
+
+            <!-- Explanation Box -->
+            <div class="quiz-explanation" id="quizExplanation" style="display: none;">
+              <div class="exp-header" id="quizExpHeader">
+                <span>Explanation</span>
+              </div>
+              <div class="exp-text" id="quizExpText"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Nav Controls -->
+          <div class="quiz-footer-nav">
+            <button class="btn-nav" id="quizPrevBtn" onclick="prevQuizQuestion()" disabled>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Previous
+            </button>
+            <button class="btn-nav btn-nav-primary" id="quizNextBtn" onclick="nextQuizQuestion()">
+              <span>Next</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS VIEW -->
+      <section class="view" id="resultsView">
+        <div class="results-layout">
+          <div class="results-hero-card">
+            <div class="score-dial">
+              <svg viewBox="0 0 120 120">
+                <circle class="dial-bg" cx="60" cy="60" r="52" />
+                <circle class="dial-fill" id="resultsDialFill" cx="60" cy="60" r="52" />
+              </svg>
+              <div class="dial-percentage" id="resultsPercentage">0%</div>
+            </div>
+            <h2 class="results-heading" id="resultsHeading">Quiz Completed!</h2>
+            <p class="results-desc" id="resultsDesc">You scored 0 out of 0 questions</p>
+
+            <div class="results-metrics-grid">
+              <div class="metric-card metric-correct">
+                <span class="metric-val" id="resCorrectCount">0</span>
+                <span class="metric-lbl">Correct</span>
+              </div>
+              <div class="metric-card metric-wrong">
+                <span class="metric-val" id="resWrongCount">0</span>
+                <span class="metric-lbl">Incorrect</span>
+              </div>
+              <div class="metric-card metric-skipped">
+                <span class="metric-val" id="resSkippedCount">0</span>
+                <span class="metric-lbl">Skipped</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Week Breakdown -->
+          <div class="results-breakdown-card">
+            <h3 class="breakdown-title">Performance by Week</h3>
+            <div class="breakdown-grid" id="resultsBreakdownGrid">
+              <!-- Dynamically populated per-week scores -->
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="results-actions-row">
+            <button class="btn-action btn-submit" onclick="reviewQuiz()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              Review Answers
+            </button>
+            <button class="btn-subtle" onclick="retryQuiz()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 4 23 10 17 10" />
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+              </svg>
+              Retry Shuffled Quiz
+            </button>
+            <button class="btn-subtle" onclick="openQuizModal()">
+              Configure New Quiz
+            </button>
+            <button class="btn-subtle" onclick="exitQuiz()">
+              Back to Browse
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- QUIZ CONFIGURATION MODAL -->
+  <div class="modal-backdrop" id="quizModal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h2 class="modal-title">Configure Quiz</h2>
+          <p class="modal-subtitle">Choose weeks and options to generate your personalized exam session</p>
+        </div>
+        <button class="modal-close-btn" onclick="closeQuizModal()" aria-label="Close Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Exam Year Selection -->
+        <div class="config-block">
+          <label class="config-heading">Select Year / PYQ</label>
+          <div class="config-toggle-pills-4" id="modalYearGroup">
+            <button class="toggle-pill active" data-year="2026" onclick="setModalYear('2026')">
+              2026 (This Year)
+            </button>
+            <button class="toggle-pill" data-year="2025" onclick="setModalYear('2025')">
+              2025 PYQ
+            </button>
+            <button class="toggle-pill" data-year="2024" onclick="setModalYear('2024')">
+              2024 PYQ
+            </button>
+            <button class="toggle-pill" data-year="all" onclick="setModalYear('all')">
+              All Years (Combined)
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Source Selection -->
+        <div class="config-block">
+          <label class="config-heading">Question Source</label>
+          <div class="config-toggle-pills" id="modalSourceGroup">
+            <button class="toggle-pill active" data-source="assignment" onclick="setModalSource('assignment')">
+              Assignments Only
+            </button>
+            <button class="toggle-pill" data-source="all" onclick="setModalSource('all')">
+              Include Study Material (Lecture Notes)
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Count Selection -->
+        <div class="config-block">
+          <label class="config-heading">Number of Questions</label>
+          <div class="config-toggle-pills-4" id="quizCountGroup">
+            <button class="toggle-pill active" data-count="20" onclick="setQuizQuestionCount('20')">20</button>
+            <button class="toggle-pill" data-count="30" onclick="setQuizQuestionCount('30')">30</button>
+            <button class="toggle-pill" data-count="50" onclick="setQuizQuestionCount('50')">50</button>
+            <label class="custom-count-control">
+              <span>Custom</span>
+              <input id="customQuizCount" type="number" min="1" step="1" placeholder="Count"
+                oninput="setQuizQuestionCount(this.value, true)" aria-label="Custom number of questions">
+            </label>
+          </div>
+          <p class="config-help" id="quizCountHelp">A random selection will be taken from the available questions.</p>
+        </div>
+
+        <!-- Weeks Selection -->
+        <div class="config-block">
+          <div class="config-heading-row">
+            <label class="config-heading">
+              Select Weeks
+              <span class="selection-counter" id="modalWeekCounter">12 of 12 selected</span>
+            </label>
+            <div class="quick-select-actions">
+              <button class="btn-link" onclick="modalSelectAllWeeks()">Select All</button>
+              <span class="sep">•</span>
+              <button class="btn-link" onclick="modalDeselectAllWeeks()">Deselect All</button>
+            </div>
+          </div>
+
+          <div class="modal-weeks-grid" id="modalWeeksGrid">
+            <!-- 12 Week cards generated dynamically -->
+          </div>
+        </div>
+
+        <!-- Shuffling Notification -->
+        <div class="modal-info-alert">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8" />
+            <line x1="4" y1="20" x2="21" y2="3" />
+            <polyline points="21 16 21 21 16 21" />
+            <line x1="15" y1="15" x2="21" y2="21" />
+          </svg>
+          <span><strong>Smart Shuffle Active:</strong> Both questions and answer options (A, B, C, D) are randomized to prevent position memorization.</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-footer-stats" id="modalTotalAvailable">
+          200 available • 20 selected
+        </div>
+        <div class="modal-footer-btns">
+          <button class="btn-subtle" onclick="closeQuizModal()">Cancel</button>
+          <button class="btn-action btn-submit" id="startQuizBtn" onclick="startConfiguredQuiz()">
+            Start Quiz
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="questions-data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
