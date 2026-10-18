@@ -37,7 +37,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the lecture, why is \"proxy gaming\" considered a failure mode in AI systems?",
     "options": [
-      "Agents over-optimize fault metrics, producing outcomes misaligned with true human values",
+      "Agents over-optimize faulty metrics, producing outcomes misaligned with true human values",
       "AI systems consume excessive computational resources unnecessarily",
       "AI systems are used to cheat in video games",
       "It results from hardware failure during large-scale simulations"
@@ -359,7 +359,7 @@ window.RSAI_QUESTIONS = [
     "id": 22,
     "week": 2,
     "source": "assignment",
-    "question": "According to the lecture, what does the Kullback�Leibler (KL) divergence penalty prevent in RLHF?",
+    "question": "According to the lecture, what does the Kullback–Leibler (KL) divergence penalty prevent in RLHF?",
     "options": [
       "The reward model from becoming too complex",
       "The policy model from diverging too far from the initial pretrained model",
@@ -377,7 +377,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following is true? (Select all that apply.)",
     "options": [
-      "Extremistan has thin tails while Medicristan has long tails.",
+      "Extremistan has thin tails while Mediocristan has long tails.",
       "Extremistan is determined by many small events.",
       "Mediocristan is the tyranny of the collective.",
       "Extremistan's impact is potentially scalable."
@@ -1127,12 +1127,12 @@ window.RSAI_QUESTIONS = [
     "id": 68,
     "week": 6,
     "source": "assignment",
-    "question": "In the Laplace Mechanism, how is the sensitivity () defined for a function ?",
+    "question": "In the Laplace Mechanism, how is the sensitivity (Δ) defined for a function f?",
     "options": [
-      "The average difference between () and (') for all neighbouring and '.",
-      "The maximum absolute difference between () and (') for any two neighboring and '.",
-      "The standard deviation of the function .",
-      "The minimum difference between () and (') for any two neighboring and '."
+      "The average difference between f(X) and f(X') for all neighboring X and X'.",
+      "The maximum absolute difference between f(X) and f(X') for any two neighboring X and X'.",
+      "The standard deviation of the function f.",
+      "The minimum difference between f(X) and f(X') for any two neighboring X and X'."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1191,7 +1191,7 @@ window.RSAI_QUESTIONS = [
     "id": 72,
     "week": 6,
     "source": "assignment",
-    "question": "Comparing the Laplace mechanism and randomized response, how does the required number of respondents differ to achieve the same privacy�utility trade-off?",
+    "question": "Comparing the Laplace mechanism and randomized response, how does the required number of respondents differ to achieve the same privacy–utility trade-off?",
     "options": [
       "The Laplace mechanism requires quadratically more people.",
       "The Laplace mechanism requires quadratically fewer people.",
@@ -1287,11 +1287,11 @@ window.RSAI_QUESTIONS = [
     "id": 78,
     "week": 7,
     "source": "assignment",
-    "question": "How does the Exponential Mechanism select a price ?",
+    "question": "How does the Exponential Mechanism select a price h ∈ H?",
     "options": [
-      "With probability proportional to the inverse of the price. (, ) 2",
-      "With probability proportional to . (, ) 2",
-      "With probability proportional to .",
+      "With probability proportional to the inverse of the price.",
+      "With probability proportional to e^((ε / (2Δ)) S(x, h)).",
+      "With probability proportional to e^((Δ / (2ε)) S(x, h)).",
       "Uniformly at random from all prices below the maximum valuation."
     ],
     "answer": 1,
@@ -2329,10 +2329,10 @@ window.RSAI_QUESTIONS = [
     "question": "Based on the mathematical definitions of cell complexes presented in the FORGE slides, which of the following statements are correct? (Select all that apply.)",
     "options": [
       "A 0-cell corresponds to a vertex, while a 1-cell corresponds to an edge in traditional graphs.",
-      "The 1-skeleton (1) of a cell complex consists exclusively of 1-dimensional cells.",
+      "The 1-skeleton X^(1) of a cell complex consists exclusively of 1-dimensional cells.",
       "Vertical boundary relations connect two cells of the same dimension that share a common boundary.",
-      "Boundary relations in the framework are restricted to be undirected, meaning = . , , 12 21",
-      "A -cell () is considered a face or boundary of a ( + 1)-cell (+1) if the set of points composing () is a subset of those composing (+1)."
+      "Boundary relations in the framework are restricted to be undirected, meaning ∂₁₂ = ∂₂₁.",
+      "A p-cell c^(p) is considered a face or boundary of a (p + 1)-cell c^(p + 1) if the set of points composing c^(p) is a subset of those composing c^(p + 1)."
     ],
     "answer": [
       0,
@@ -5515,10 +5515,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the risk decomposition framework, which combination of factors would result in the HIGHEST risk from an AI system deployed in a critical infrastructure setting?",
     "options": [
-      "Low vulnerability high haard exposure; low haard severity",
-      "High vulnerability, low haard exposure; high haard severity",
-      "High vulnerability high haard exposure; high haard severity",
-      "Low vulnerability; low haard exposure; high haard severity"
+      "Low vulnerability high hazard exposure; low hazard severity",
+      "High vulnerability, low hazard exposure; high hazard severity",
+      "High vulnerability high hazard exposure; high hazard severity",
+      "Low vulnerability; low hazard exposure; high hazard severity"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -5529,7 +5529,7 @@ window.RSAI_QUESTIONS = [
     "id": 328,
     "week": 1,
     "source": "assignment",
-    "question": "The concept of treacherous turns In AI systems refers to:",
+    "question": "The concept of treachzerous turns in AI systems refers to:",
     "options": [
       "AI systems making computational errors during complex calculations",
       "AI systems behaving differently once they reach sufficient intelligence",
@@ -5561,12 +5561,12 @@ window.RSAI_QUESTIONS = [
     "id": 330,
     "week": 1,
     "source": "assignment",
-    "question": "The \"Swiss cheese model\" mentloned in organiational risks suggests that:",
+    "question": "The \"Swiss cheese model\" mentioned in organizational risks suggests that:",
     "options": [
-      "Organiations should have a single; very strong safety measure",
-      "Safety measures should be implemented randomly across the organiation",
+      "Organizations should have a single; very strong safety measure",
+      "Safety measures should be implemented randomly across the organization",
       "Multiple layers of defense compensate for individual weaknesses",
-      "Safety measures are unnecessary if the AI system i5 well-designed"
+      "Safety measures are unnecessary if the AI system is well-designed"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -5580,8 +5580,8 @@ window.RSAI_QUESTIONS = [
     "question": "Which scenario best illustrates the concept of proxy gaming?",
     "options": [
       "An AI chess program that cheats by accessing opponent's strategy",
-      "A recommendation system optimiing for user engagerent rather than user well-being",
-      "An AI translator that produces grammatically Incorrect sentences",
+      "A recommendation system optimizing for user engagement rather than user well-being",
+      "An AI translator that produces grammatically incorrect sentences",
       "A facial recognition system that fails to identify certain ethnic groups"
     ],
     "answer": 1,
@@ -5593,12 +5593,12 @@ window.RSAI_QUESTIONS = [
     "id": 332,
     "week": 1,
     "source": "assignment",
-    "question": "A factory robot confuses a human worker for a box of vegetables and pushes the person, resulting in death.\" According to the dis- aster risk equation; what was the prlmary failure component?",
+    "question": "A factory robot confuses a human worker for a box of vegetables and pushes the person, resulting in death.\" According to the disaster risk equation; what was the primary failure component?",
     "options": [
-      "Haard (misclassification capability)",
-      "Haard Exposure (human-robot proximity)",
+      "Hazard (misclassification capability)",
+      "Hazard Exposure (human-robot proximity)",
       "Vulnerability (employee safety protocols)",
-      "AIl components failed equally"
+      "All components failed equally"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -5613,7 +5613,7 @@ window.RSAI_QUESTIONS = [
     "options": [
       "Malicious use involves intentional harmful deployment by humans; while rogue AI acts independently",
       "Malicious use only affects cybersecurity; while rogue AI affects all domains",
-      "Malicious use is easier to detect than rogue AI behavior",
+      "Malicious use is easizer to detect than rogue AI behavior",
       "Malicious use requires more advanced AI capabilities than rogue AI"
     ],
     "answer": 0,
@@ -5641,7 +5641,7 @@ window.RSAI_QUESTIONS = [
     "id": 335,
     "week": 1,
     "source": "assignment",
-    "question": "How do you identify and avoid haards in ML systems according to the disaster risk equation framework?",
+    "question": "How do you identify and avoid hazards in ML systems according to the disaster risk equation framework?",
     "options": [
       "Alignment",
       "Robustness",
@@ -5691,7 +5691,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "12 RoBERTa succeeds in reasoning tasks where BERT fails due to:",
     "options": [
-      "Better tokeniation",
+      "Better tokenization",
       "Emergent capabilities from) sca) ling",
       "Impri wad tte n.ic nner hanis75",
       "Larse {c-bular ~i_",
@@ -5722,17 +5722,14 @@ window.RSAI_QUESTIONS = [
     "id": 340,
     "week": 2,
     "source": "assignment",
-    "question": "What Is the key difference between covariate shift and concept shift in distribution shlfts?",
+    "question": "What is the key difference between covariate shift and concept shift in distribution shifts?",
     "options": [
-      "Covariate shift changes P(ylx) while concept shift changes P(x)",
-      "Covariate shift changes P(x) while P(ylx) remains constant, concept shift changes P(ylx) while P(x) remains constant",
-      "Both change P(x) and P(ylx) simultaneously",
+      "Covariate shift changes P(y|x) while concept shift changes P(x)",
+      "Covariate shift changes P(x) while P(y|x) remains constant; concept shift changes P(y|x) while P(x) remains constant",
+      "Both change P(x) and P(y|x) simultaneously",
       "Covariate shift affects labels while concept shift affects features"
     ],
-    "answer": [
-      0,
-      1
-    ],
+    "answer": 1,
     "multiSelect": true,
     "explanation": "Answer taken from the accepted answer shown in the 2025 assignment PDF.",
     "year": 2025
@@ -5743,7 +5740,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the AugMix methodology; what is the primary advantage over uncontrolled random augmentations?",
     "options": [
-      "It uses skip connections to keep images recogniable while applying diverse augmentations",
+      "It uses skip connections to keep images recognizable while applying diverse augmentations",
       "It requires Iess computational power",
       "It only applies single augmentations instead of multiple",
       "It focuses on geometric transformations only"
@@ -5811,7 +5808,7 @@ window.RSAI_QUESTIONS = [
     "id": 345,
     "week": 2,
     "source": "assignment",
-    "question": "In the RLHF optimiation objective, why is a KL-divergence penatty term added to the reward maximiation?",
+    "question": "In the RLHF optimization objective, why is a KL-divergence penalty term added to the reward maximization?",
     "options": [
       "To prevent the model from generating repetitive outputs",
       "To ensure the model stays close to the original pretrained model",
@@ -5832,7 +5829,7 @@ window.RSAI_QUESTIONS = [
       "Humans providing incorrect feedback to manipulate the system",
       "External attackers compromising the reward model",
       "The reward model overfitting to the training data",
-      "The model finding ways to maximie the reward function without achieving the intended behavior"
+      "The model finding ways to maximize the reward function without achieving the intended behavior"
     ],
     "answer": 3,
     "multiSelect": false,
@@ -5843,12 +5840,12 @@ window.RSAI_QUESTIONS = [
     "id": 347,
     "week": 2,
     "source": "assignment",
-    "question": "Identify the equations that can lead to a long-talled distribution.",
+    "question": "Identify the equations that can lead to a long-tailed distribution.",
     "options": [
-      "Idea student resources time",
-      "Idea student resources time",
-      "Idea student + resource + time",
-      "Idea student resource time"
+      "Research output = Ideas ? Time ? Students ? Resources",
+      "Research output = Ideas + Time + Students + Resources",
+      "Research output = Ideas ? (Time + Students + Resources)",
+      "Research output = Ideas + (Time ? Students ? Resources)"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -5877,7 +5874,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is a major challenge with using a single reward function in RLHF?",
     "options": [
-      "It is computationally expensive to optimie",
+      "It is computationally expensive to optimize",
       "It cannot represent a diverse society 0f humans",
       "It requires too much training data",
       "It is unstable during training"
@@ -5891,7 +5888,7 @@ window.RSAI_QUESTIONS = [
     "id": 350,
     "week": 2,
     "source": "assignment",
-    "question": "12 What is Direct Preference Optimiation (DPO) equivalent to in the context of RLHF component removal?",
+    "question": "12 What is Direct Preference Optimization (DPO) equivalent to in the context of RLHF component removal?",
     "options": [
       "RLHF - Human Feedback",
       "RLHF Reward Model",
@@ -5944,7 +5941,7 @@ window.RSAI_QUESTIONS = [
     "id": 353,
     "week": 3,
     "source": "assignment",
-    "question": "What is GDPR*s Article 17 about in the context of Machine Learning?",
+    "question": "What is GDPR's Article 17 about in the context of Machine Learning?",
     "options": [
       "Right to be remembered",
       "Right to be modified",
@@ -5983,8 +5980,8 @@ window.RSAI_QUESTIONS = [
     "question": "What is Membership Inference Attack (MIA) used for?",
     "options": [
       "To train LLMs faster",
-      "To improve the models robustness",
-      "To rerove accurate data",
+      "To improve the model's robustness",
+      "To remove accurate data",
       "To classify between training and unseen data"
     ],
     "answer": 3,
@@ -6179,7 +6176,7 @@ window.RSAI_QUESTIONS = [
     "options": [
       "The model's ability to predict legal outcomes based solely on accuracy",
       "A metric combining fairness and accuracy using a beta-weighted harmonic mean",
-      "A score based on the usage of legal jargon for marginalied groups",
+      "A score based on the usage of legal jargon for marginalized groups",
       "An evaluation metric used to define how well a model understands legal jargon"
     ],
     "answer": 1,
@@ -6223,7 +6220,7 @@ window.RSAI_QUESTIONS = [
     "id": 369,
     "week": 4,
     "source": "assignment",
-    "question": "A researcher is evaluating a facial recognition model they helped develop. During testing; they select images where the model per- forms better; such as images with ideal lighting or frontal faces, while ignoring diverse or difficult cases (like low-light; non-white faces, or side angles) Which type of bias is this?",
+    "question": "A researcher is evaluating a facial recognition model they helped develop. During testing; they select images where the model performs better; such as images with ideal lighting or frontal faces, while ignoring diverse or difficult cases (like low-light; non-white faces, or side angles) Which type of bias is this?",
     "options": [
       "Reporting bias",
       "Sampling bias",
@@ -6307,7 +6304,7 @@ window.RSAI_QUESTIONS = [
     "options": [
       "When historical data reflects inequalities that existed in the world at that time",
       "When data is collected from a completely random and diverse group",
-      "If proper randomiation is not used during data collection",
+      "If proper randomization is not used during data collection",
       "When a model fails to predict a label accurately"
     ],
     "answer": 2,
@@ -6354,7 +6351,7 @@ window.RSAI_QUESTIONS = [
     "question": "In counterfactual data augmentation (CDA); what is altered to rebalance the corpus?",
     "options": [
       "Sentence Length",
-      "Syntex",
+      "Syntax",
       "Bias attribute words",
       "Vocabulary complexity"
     ],
@@ -6367,7 +6364,7 @@ window.RSAI_QUESTIONS = [
     "id": 378,
     "week": 5,
     "source": "assignment",
-    "question": "Which characteristic makes a language model more likely to generate gender-neutral responses in text-to-text tasks? (Select adl that apply:)",
+    "question": "Which characteristic makes a language model more likely to generate gender-neutral responses in text-to-text tasks? (Select all that apply:)",
     "options": [
       "Training on diverse and balanced datasets",
       "Use of bias-specific adapter modules",
@@ -6404,20 +6401,18 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following is the correct formula for Pointwise Mutual Information (PMI)?",
     "options": [
-      "PMI(Wi w;) = log2 N . c(wis Wj)",
-      "c(e;)? . (w;)?",
-      "PMI(wi, w;) = loga cws) . cw;)",
-      "N - c(wi; w;)",
-      "N . c(ws, w9)",
-      "PMI(wi w4) = log c(wy) - c(w;)",
-      "PMI(Wi, w;) = lob c(wi, W;)",
-      "N . c(w;) . c(w;)"
+      "PMI(w?,w?) = log?[N ? c(w?,w?) / (c(w?)c(w?))]",
+      "PMI(w?,w?) = log?[c(w?)c(w?) / (N ? c(w?,w?))]",
+      "PMI(w?,w?) = log?[P(w?,w?) / (P(w?)P(w?))]",
+      "PMI(w?,w?) = P(w?,w?) / (P(w?)P(w?))",
+      "PMI(w?,w?) = log?[N / (c(w?)c(w?))]",
+      "PMI(w?,w?) = log?[P(w?)P(w?) / P(w?,w?)]",
+      "PMI(w?,w?) = log?[N ? c(w?,w?) / (c(w?)c(w?))]",
+      "PMI(w?,w?) = log?[c(w?)c(w?) / N]"
     ],
     "answer": [
       0,
-      2,
-      5,
-      6
+      2
     ],
     "multiSelect": true,
     "explanation": "Answer taken from the accepted answer shown in the 2025 assignment PDF.",
@@ -6451,7 +6446,7 @@ window.RSAI_QUESTIONS = [
       "Fusing bias-specific adapters while keeping the base model the same_",
       "Replacing all model weights with debiased adapters_",
       "Dynamically routing inputs based on detected bias type_",
-      "Using GANs to halilucinate fair outputs_"
+      "Using GANs to hallucinate fair outputs_"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -6518,7 +6513,7 @@ window.RSAI_QUESTIONS = [
     "options": [
       "Cannot effectively debias across all categories_",
       "Trains slower than other models_",
-      "Requ Fes F1 Or IJu) (a9",
+      "Requires F1 Or IJu) (a9",
       "Doe ; 13: irde rslaij] 37 ext &' infcriaiic?"
     ],
     "answer": 0,
@@ -6533,7 +6528,7 @@ window.RSAI_QUESTIONS = [
     "question": "What are the primary disadvantages of cryptographic solutions for privacy protection? Select all that apply:",
     "options": [
       "Inference possibility remains uncertain in all scenarios",
-      "Utility reduces",
+      "utility reduces",
       "It is expensive",
       "Security guarantees are absolute in all cases"
     ],
@@ -6549,12 +6544,12 @@ window.RSAI_QUESTIONS = [
     "id": 388,
     "week": 6,
     "source": "assignment",
-    "question": "Why do anonymiation techniques often fail to provide adequate privacy protection?",
+    "question": "Why do anonymization techniques often fail to provide adequate privacy protection?",
     "options": [
       "They require excessive computational resources",
-      "Adversaries can leverage auxiliary databases for de-anonymiation attacks",
+      "Adversaries can leverage auxiliary databases for de-anonymization attacks",
       "They only work with structured data formats",
-      "The anonymiation process introduces too much noise"
+      "The anonymization process introduces too much noise"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -6565,12 +6560,12 @@ window.RSAI_QUESTIONS = [
     "id": 389,
     "week": 6,
     "source": "assignment",
-    "question": "In the randomied response model what does the parameter epsilon In &* represent?",
+    "question": "In the randomized response model, what does the parameter ? represent?",
     "options": [
       "The percentage of truthfulness of the response that is allowed to be revealed",
       "The ratio between falsehood and randomness in responses",
       "The computational complexity of the algorithm",
-      "The nurnber of participants in the study"
+      "The number of participants in the study"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -6583,9 +6578,9 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What characteries an ideal privacy model?",
     "options": [
-      "Maximum utility with ero privacy guarantees",
+      "Maximum utility with zero privacy guarantees",
       "Perfect privacy with minimal utility",
-      "Balanced trade-off between Utility and privacy requirements",
+      "Balanced trade-off between utility and privacy requirements",
       "Complete data suppression for absolute privacy"
     ],
     "answer": 2,
@@ -6597,12 +6592,12 @@ window.RSAI_QUESTIONS = [
     "id": 391,
     "week": 6,
     "source": "assignment",
-    "question": "Given: Xi represents truth, Yi represents randomied value of Xi, and Zi = (Yi - (1/(1 + e)))x(et + 1)/(et _ 1), What is the expect- ed value Zi?",
+    "question": "Given X? represents the truth, Y? represents the randomized value of X?, and Z? = (Y? ? 1/(1 + e?)) ? ((e? + 1)/(e? ? 1)), what is the expected value of Z??",
     "options": [
-      "E[i] =Yi",
-      "E[Zi] =Xi",
-      "E[i] = etxXi",
-      "El ) = 0"
+      "E[X?] = Y?",
+      "E[Z?] = X?",
+      "E[X?] = e? ? X?",
+      "E[Z?] = 0"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -6613,12 +6608,12 @@ window.RSAI_QUESTIONS = [
     "id": 392,
     "week": 6,
     "source": "assignment",
-    "question": "In the randomied response model, which statements are correct? Select all that apply:",
+    "question": "In the randomized response model, which statements are correct? Select all that apply:",
     "options": [
-      "Privacy guarantee can be controlled by parameter epsilon",
-      "Privacy and utility are independent of sample sie",
+      "privacy guarantee can be controlled by parameter epsilon",
+      "privacy and utility are independent of sample size",
       "Higher epsilon values provide stronger utility",
-      "Utility guarantee scales with square root of n"
+      "utility guarantee scales with square root of n"
     ],
     "answer": [
       0,
@@ -6634,10 +6629,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Consider datasets X= {x1,*2, XN} (truth), Y = {y1,Y2, YN} (revealed values} To derive better estimators Z = {1,22, _ from Y, What process is required?",
     "options": [
-      "Removing bias from Y introduced through randomiation",
-      "Adding bias to Y removed through randomiation",
-      "Removing variance from introduced through randomiation",
-      "Adding variance to Y removed through randomiation"
+      "Removing bias from Y introduced through randomization",
+      "Adding bias to Y removed through randomization",
+      "Removing variance from introduced through randomization",
+      "Adding variance to Y removed through randomization"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -6652,8 +6647,8 @@ window.RSAI_QUESTIONS = [
     "options": [
       "Sensitivity of the query function",
       "Magnitude of added noise",
-      "Sie of the dataset",
-      "Privacy parameter Epsilon"
+      "Size of the dataset",
+      "Privacy parameter ?"
     ],
     "answer": [
       0,
@@ -6689,7 +6684,7 @@ window.RSAI_QUESTIONS = [
     "id": 396,
     "week": 6,
     "source": "assignment",
-    "question": "For fixed privacy levels, how do sample sie requirements differ between Laplacian mechanism and Randomied response? 10.",
+    "question": "For fixed privacy levels, how do sample size requirements differ between Laplacian mechanism and Randomized response? 10.",
     "options": [
       "Constant factor difference",
       "Exponential factor difference",
@@ -6707,11 +6702,11 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Higher privacy guarantees can be achieved in which scenarios? Select all correct options_",
     "options": [
-      "When Epsilon parameter is increased",
+      "When the ? parameter is increased",
       "When noise magnitude is increased",
       "When inverse sensitivity is high",
       "When variance in the mechanism is high",
-      "When utility requirements are maximied"
+      "When utility requirements are maximized"
     ],
     "answer": [
       1,
@@ -6725,12 +6720,12 @@ window.RSAI_QUESTIONS = [
     "id": 398,
     "week": 6,
     "source": "assignment",
-    "question": "12 In the context of randomied response; what happens to Utility as privacy guarantees increase?",
+    "question": "12 In the context of randomized response; what happens to utility as privacy guarantees increase?",
     "options": [
-      "Utility remains constant",
-      "Utility increases proportionally",
-      "Utilit' decr R3 ies Ju ;0 incre sed ,oi se:",
-      "Utili 'y |cccnes nje#e $"
+      "utility remains constant",
+      "utility increases proportionally",
+      "utility decreases due to increased noise",
+      "utility becomes undefined"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -6741,12 +6736,12 @@ window.RSAI_QUESTIONS = [
     "id": 399,
     "week": 7,
     "source": "assignment",
-    "question": "In approximate differential privacy; what role does the delta (6) parameter play?(Notation same as in the lecture)",
+    "question": "In approximate differential privacy, what role does the delta (?) parameter play? (Notation same as in the lecture)",
     "options": [
-      "It ensures that epsilon differential privacy holds for all possible sets",
-      "It allows for some rare events (set S) where epsilon differential privacy may not hold",
+      "It ensures that ?-differential privacy holds for all possible sets",
+      "It allows for some rare events (set S) where ?-differential privacy may not hold",
       "It reduces the amount of noise required in all cases",
-      "It eliminates the need for the epsilon parameter"
+      "It eliminates the need for the ? parameter"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -6757,7 +6752,7 @@ window.RSAI_QUESTIONS = [
     "id": 400,
     "week": 7,
     "source": "assignment",
-    "question": "What is a key advantage of approximate dlfferentlal privacy over standard differentlal privacy?",
+    "question": "What is a key advantage of approximate differential privacy over standard differential privacy?",
     "options": [
       "It provides stronger privacy guarantees",
       "It eliminates the need for noise addition",
@@ -6773,12 +6768,12 @@ window.RSAI_QUESTIONS = [
     "id": 401,
     "week": 7,
     "source": "assignment",
-    "question": "In approximate differential privacy; the Gaussian noise follows which pattern?",
+    "question": "In approximate differential privacy, the Gaussian noise follows which pattern?",
     "options": [
-      "N(O, 0} where 0 Vd log(1/5))/(nte)",
-      "N(O, 0} where & v(d log(1/6))/(e)",
-      "N(O, 0} where & log(1/6)/(n-e}",
-      "N(O, 0} where & = Y(d log(1/6))/(n-e)"
+      "N(0, ??), where ? ? ?(d log(1/?)) / n",
+      "N(0, ??), where ? ? ?(d log(1/?)) / ?",
+      "N(0, ??), where ? ? ?(d log(1/?)) / (n?)",
+      "N(0, ??), where ? ? ?(d log(1/?)) / (n + ?)"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -6824,7 +6819,7 @@ window.RSAI_QUESTIONS = [
     "question": "What is the Post-Processing property in differential privacy?",
     "options": [
       "Any preprocessing of data before applying DP mechanisms maintains the privacy guarantee",
-      "Privacy guarantees &re strengthened when multiple post-processing steps are applied",
+      "privacy guarantees &re strengthened when multiple post-processing steps are applied",
       "Any data-independent transformation applied to the output of a differentially private mechanism does not degrade its privacy guarantee",
       "Post-processing can be used to improve the privacy guarantee of any mechanism"
     ],
@@ -6843,9 +6838,9 @@ window.RSAI_QUESTIONS = [
       "The dataset is biased against males",
       "Reconstruction error differences are due to random noise",
       "Male data is more correlated",
-      "You dldntt attempt this question well in time_"
+      "You didn't attempt this question well in time_"
     ],
-    "answer": 4,
+    "answer": 0,
     "multiSelect": false,
     "explanation": "Answer taken from the accepted answer shown in the 2025 assignment PDF.",
     "year": 2025
@@ -6854,12 +6849,12 @@ window.RSAI_QUESTIONS = [
     "id": 406,
     "week": 7,
     "source": "assignment",
-    "question": "In the exponential mechanism to calculate the price to maximie the revenue; identify the correct statement in the scenario where 2 unequal prices result in the same revenue:",
+    "question": "In the exponential mechanism to calculate the price to maximize the revenue; identify the correct statement in the scenario where 2 unequal prices result in the same revenue:",
     "options": [
       "Both prices have an unequal probability of being selected",
-      "Both prices have an equal probabillty of being selected",
-      "higher price has a higher probability of being chosen due to normalisation",
-      "lower price has higher probability of being chosen due to normalisation"
+      "Both prices have an equal probability of being selected",
+      "higher price has a higher probability of being chosen due to normalization",
+      "lower price has higher probability of being chosen due to normalization"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -6886,7 +6881,7 @@ window.RSAI_QUESTIONS = [
     "id": 408,
     "week": 7,
     "source": "assignment",
-    "question": "10. In & classifier; if a data point Iies exactly on the decision boundary (hyperplane) what is the probability of it belonging to the posi- tive class?",
+    "question": "10. In a classifier; if a data point lies exactly on the decision boundary (hyperplane) what is the probability of it belonging to the positive class?",
     "options": [
       "Greater than 50%",
       "Less than 50%",
@@ -6902,14 +6897,14 @@ window.RSAI_QUESTIONS = [
     "id": 409,
     "week": 7,
     "source": "assignment",
-    "question": "In Fair Logistic Regression; the equation P(M(x)-IIC=1) P(M(x)-IIC-0} represents which fairness metrlc?",
+    "question": "In Fair Logistic Regression, the equation |P(M(x)=1 | C=1) ? P(M(x)=1 | C=0)| represents which fairness metric?",
     "options": [
       "Equality of Opportunity",
       "Statistical Parity",
       "Predictive Parity",
       "Indivisual fairness"
     ],
-    "answer": 0,
+    "answer": 1,
     "multiSelect": false,
     "explanation": "Answer taken from the accepted answer shown in the 2025 assignment PDF.",
     "year": 2025
@@ -6920,7 +6915,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In pixel-attribution methods, which statement best distinguishes perturbation-based approaches from gradient-based saliency? Perturbation-based methods compute input gradients; gradient-based methods fit local surrogate models:",
     "options": [
-      "Perturbation-based methods are model-agnostic and computaticnally expensive; gradient-based methods use model internals and are",
+      "Perturbation-based methods are model-agnostic and computationally expensive; gradient-based methods use model internals and are",
       "faster;",
       "Perturbation-based methods always produce sparser explanations; gradient-based methods always produce denser explanations",
       "Perturbation-based methods require access to intermediate activations; gradient-based methods are strictly black-box_"
@@ -6939,13 +6934,13 @@ window.RSAI_QUESTIONS = [
     "id": 411,
     "week": 8,
     "source": "assignment",
-    "question": "Which behavior of a saliency map under layer-randomiation is & red",
+    "question": "Which behavior of a saliency map under layer-randomization is & red",
     "options": [
-      "The saliency map remains [argely unchanged after randomiing many layers",
-      "The saliency map changes dramatically as earlier layers are randomied.",
-      "The satiency map's sign (positivelnegative) flips while spatial structure remains_",
+      "The saliency map remains [argely unchanged after randomizing many layers",
+      "The saliency map changes dramatically as earlier layers are randomized.",
+      "The saliency map's sign (positivelnegative) flips while spatial structure remains_",
       "Absolute saliency values shrink while layout shifts",
-      "You dldnt attempt this question welt in time"
+      "You didn't attempt this question welt in time"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -6972,11 +6967,11 @@ window.RSAI_QUESTIONS = [
     "id": 413,
     "week": 8,
     "source": "assignment",
-    "question": "Optimied-mask saliency methods (optimie a mask that when applied alters prediction) are brittle because:",
+    "question": "Optimized-mask saliency methods (optimize a mask that when applied alters prediction) are brittle because:",
     "options": [
       "Their masks always converge to single-pixel trigger:",
       "They require closed-form solutions for mask gradients.",
-      "Results strongly depend on mask initialiation and hyperparameters",
+      "Results strongly depend on mask initialization and hyperparameters",
       "They are invariant to adversarial perturbations_"
     ],
     "answer": 2,
@@ -7037,12 +7032,12 @@ window.RSAI_QUESTIONS = [
     "id": 417,
     "week": 8,
     "source": "assignment",
-    "question": "Defenses that reverse-= ~engineer potential triggers (e.g,, via optimiation) rely on which observations? One can optimie small masks/patterns that cause misclassification to a target label:",
+    "question": "Defenses that reverse-= ~engineer potential triggers (e.g,, via optimization) rely on which observations? One can optimize small masks/patterns that cause misclassification to a target label:",
     "options": [
-      "If an optimied trigger for a particular label is significantly smaller/simpler than others, it suggests a Trojan.",
+      "If an optimized trigger for a particular label is significantly smaller/simpler than others, it suggests a Trojan.",
       "Reverse-engineered triggers always exactly match the original poisoning trigger used at training:",
       "Pruning neurons highly activated by a reverse-engineered trigger can mitigate the Trojan",
-      "Training a meta-classifier to detect Trojaned models is computationally cheap and always generalies."
+      "Training a meta-classifier to detect Trojaned models is computationally cheap and always generalizes."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7055,8 +7050,8 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does Guided BackProp differ from standard backpropagation in generating saliency maps?",
     "options": [
-      "It only considers positive gradients by eroing out negative activations and gradients",
-      "It back propagates gradients with all activations eroed out",
+      "It only considers positive gradients by zzeroing out negative activations and gradients",
+      "It back propagates gradients with all activations zzeroed out",
       "It focuses on highlighting both negative and positive contributions_",
       "requires padding to the image before backpropagation"
     ],
@@ -7085,7 +7080,7 @@ window.RSAI_QUESTIONS = [
     "id": 420,
     "week": 8,
     "source": "assignment",
-    "question": "What is the primary limitation of LIMEs Iocal explanations?",
+    "question": "What is the primary limitation of LIME's local explanations?",
     "options": [
       "LIME only works on image data",
       "LIME explanations are locally faithful but not necessarily globally consistent",
@@ -7106,7 +7101,7 @@ window.RSAI_QUESTIONS = [
       "Fairness",
       "Explainability",
       "Sustainability",
-      "Privacy"
+      "privacy"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -7187,7 +7182,7 @@ window.RSAI_QUESTIONS = [
       "Data poisoning",
       "Model stealing",
       "Breaking alignment policies of chatbots",
-      "Privacy breaches"
+      "privacy breaches"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -7232,10 +7227,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the lecture; who is primarily responsible for self-regulation in the context of AI and technology?",
     "options": [
-      "Individuals Individual organiations",
+      "Individuals Individual organizations",
       "Government agencies",
-      "Only the organiations with more than crore turnover",
-      "International organiations"
+      "Only the organizations with more than crore turnover",
+      "International organizations"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7251,7 +7246,7 @@ window.RSAI_QUESTIONS = [
       "Define, Measure; Understand, Improve, Mitigate; Monitor",
       "Design, Build; Test Deploy; Evaluate, Maintain",
       "Plan; Execute; Review Adjust; Scale; Optimie",
-      "Collect; Process, Analye; Model; Validate; Implement"
+      "Collect; Process, Analyze; Model; Validate; Implement"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7326,14 +7321,14 @@ window.RSAI_QUESTIONS = [
     "id": 435,
     "week": 10,
     "source": "assignment",
-    "question": "What is the key difference between 'reward gaming' and 'goal miss generaliation' in AI systems?",
+    "question": "What is the key difference between 'reward gaming' and 'goal miss generalization' in AI systems?",
     "options": [
-      "Reward gaming is an intentional exploitation of the reward function; while goal miss generaliation is an accidental misinterpretation of the",
+      "Reward gaming is an intentional exploitation of the reward function; while goal miss generalization is an accidental misinterpretation of the",
       "goal:",
-      "Reward gaming is easier to detect and correct than goal miss generaliation.",
-      "Reward gaming involves optimiing the wrong reward function, while goal miss generaliation involves optimiing a correlated but incorrect",
+      "Reward gaming is easizer to detect and correct than goal miss generalization.",
+      "Reward gaming involves optimizing the wrong reward function, while goal miss generalization involves optimizing a correlated but incorrect",
       "reward function",
-      "Reward gaming is a more significant threat to AI safety than goal miss generaliation"
+      "Reward gaming is a more significant threat to AI safety than goal miss generalization"
     ],
     "answer": [
       0,
@@ -7371,7 +7366,7 @@ window.RSAI_QUESTIONS = [
       "There is a lack of incentive to protect user privacy in the current business models of tech companies",
       "The data is not diverse enough, which leads to biased and unfair AI models_",
       "The data is too expensive for smaller companies to acquire, leading to a monopoliation of AI development",
-      "You dldnt attempt this question welt in time"
+      "You didn't attempt this question welt in time"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -7404,7 +7399,7 @@ window.RSAI_QUESTIONS = [
       "The difficulty of achieving global coordination to pause or regulate AI development, similar to challenges like climate change",
       "The potential for AI systems to be misused by individuals for personal entertainment, leading to decreased productivity",
       "The legal and ethical issues surrounding the use of copyrighted material for training Large Language Models (LLMs)",
-      "The risk of goal miss generaliation, where an AI optimies for a correlated but incorrect goal, leading to unintended and potentially harmful behavior",
+      "The risk of goal miss generalization, where an AI optimizes for a correlated but incorrect goal, leading to unintended and potentially harmful behavior",
       "The high computational cost of training advanced AI models, making them accessible only to a few large tech companies"
     ],
     "answer": [
@@ -7562,7 +7557,7 @@ window.RSAI_QUESTIONS = [
     "id": 448,
     "week": 11,
     "source": "assignment",
-    "question": "According to the OECD AI princlples, what is 'Accountability'",
+    "question": "According to the OECD AI principles, what is 'Accountability'",
     "options": [
       "AI actors should respect the rule of law, human rights, democratic and human-centered values throughout the AI system lifecycle",
       "AI actors should commit to transparency and responsible disclosure regarding AI systems",
@@ -7583,7 +7578,7 @@ window.RSAI_QUESTIONS = [
       "AI systems that understand too many languages_",
       "AI systems that can understand logic but not emotional statements_",
       "AI systems that can generate media such as images, videos, and audio,",
-      "AI systerns that are able to behaviorally manipulate people"
+      "AI systems that are able to behaviorally manipulate people"
     ],
     "answer": 3,
     "multiSelect": false,
@@ -7594,7 +7589,7 @@ window.RSAI_QUESTIONS = [
     "id": 450,
     "week": 11,
     "source": "assignment",
-    "question": "According 10 Semantic Graph Entropy; which of the following is true?",
+    "question": "According to Semantic Graph Entropy; which of the following is true?",
     "options": [
       "Entropy and consistency are not related",
       "Entropy and consistency are proportional.",
@@ -7650,7 +7645,7 @@ window.RSAI_QUESTIONS = [
     "options": [
       "Commonsense scenarios.",
       "Mathematical problems_",
-      "Moral scenarias_",
+      "Moral scenarios_",
       "Factual questions_"
     ],
     "answer": 2,
@@ -7662,10 +7657,10 @@ window.RSAI_QUESTIONS = [
     "id": 454,
     "week": 11,
     "source": "assignment",
-    "question": "10. What was a key finding of the SaGE framework regarding consistency ad accuracy?",
+    "question": "10. What was a key finding of the SaGE framework regarding consistency and accuracy?",
     "options": [
       "Consistency and accuracy are the same problem",
-      "Consistency and accuracy are not the same problem and need separate evaluaticn.",
+      "Consistency and accuracy are not the same problem and need separate evaluation.",
       "Accuracy automatically implies consistency:",
       "Consistency is irrelevant if accuracy is high."
     ],
@@ -7732,7 +7727,7 @@ window.RSAI_QUESTIONS = [
       "By capturing interactions between multiple nodes",
       "By reducing computational costs.",
       "By simplifying the graph structure",
-      "You dldnt attempt this question well in time_"
+      "You didn't attempt this question well in time_"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -7748,7 +7743,7 @@ window.RSAI_QUESTIONS = [
       "Framework For Real-time Graph Explanations.",
       "Fundamental Operations for Relevant Graph Embeddings_",
       "Framework For Higher-Order Representations In Graph Explanations",
-      "Fast Optimiation of Graph Explanations_"
+      "Fast Optimization of Graph Explanations_"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -7759,7 +7754,7 @@ window.RSAI_QUESTIONS = [
     "id": 460,
     "week": 12,
     "source": "assignment",
-    "question": "Based on the \"Lifting the Graph\" algorlthm, which of the following are represented as augmented nodes? (Select all that apply:)",
+    "question": "Based on the \"Lifting the Graph\" algorithm, which of the following are represented as augmented nodes? (Select all that apply:)",
     "options": [
       "All nodes (0-cells)",
       "Edges (1-cells)",
@@ -7826,7 +7821,7 @@ window.RSAI_QUESTIONS = [
     "id": 464,
     "week": 12,
     "source": "assignment",
-    "question": "When making vectors from one distributlon to look Iike those of another (e.g., toxic to non-toxic), what Is a key desired outcome besides guarding? Increasing the models complexity:",
+    "question": "When making vectors from one distribution to look like those of another (e.g., toxic to non-toxic), what Is a key desired outcome besides guarding? Increasing the model's complexity:",
     "options": [
       "Preserving semantics unrelated to the changed attribute;",
       "Introducing new semantic meanings_",
@@ -7859,7 +7854,7 @@ window.RSAI_QUESTIONS = [
     "question": "What is \"Probing",
     "options": [
       "A method to physically modify neural networks.",
-      "A method to analye infcrmation stored in a models representations.",
+      "A method to analyze information stored in a model's representations.",
       "technique for speeding up model training",
       "A way to generate new data for models_"
     ],
@@ -7872,7 +7867,7 @@ window.RSAI_QUESTIONS = [
     "id": 467,
     "week": 12,
     "source": "assignment",
-    "question": "What is the term for hidden functionallty implanted Iinto models by adversaries that can cause dangerous changes in behavior 12 when triggered?",
+    "question": "What is the term for hidden functionality implanted into models by adversaries that can cause dangerous changes in behavior 12 when triggered?",
     "options": [
       "Trojan",
       "Worm",
