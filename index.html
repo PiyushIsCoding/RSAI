@@ -140,6 +140,7 @@
             <div class="count-indicators">
               <span class="year-badge" id="browseYearBadge">2026 (This Year)</span>
               <span class="q-count-badge" id="browseCountBadge">12 questions</span>
+              <span class="q-count-badge" id="browseScoreBadge">0 correct</span>
             </div>
           </div>
         </header>
@@ -353,7 +354,8 @@
         <div class="config-block">
           <label class="config-heading">Number of Questions</label>
           <div class="config-toggle-pills-4" id="quizCountGroup">
-            <button class="toggle-pill active" data-count="20" onclick="setQuizQuestionCount('20')">20</button>
+          <button class="toggle-pill active" data-count="all" onclick="setQuizQuestionCount('all')">All</button>
+          <button class="toggle-pill" data-count="20" onclick="setQuizQuestionCount('20')">20</button>
             <button class="toggle-pill" data-count="30" onclick="setQuizQuestionCount('30')">30</button>
             <button class="toggle-pill" data-count="50" onclick="setQuizQuestionCount('50')">50</button>
             <label class="custom-count-control">
@@ -398,7 +400,7 @@
 
       <div class="modal-footer">
         <div class="modal-footer-stats" id="modalTotalAvailable">
-          200 available • 20 selected
+          All available questions selected
         </div>
         <div class="modal-footer-btns">
           <button class="btn-subtle" onclick="closeQuizModal()">Cancel</button>

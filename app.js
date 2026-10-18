@@ -40,7 +40,7 @@ let browseUserAnswers = {}; // map of qId -> selectedOptionIndex
 let modalSelectedWeeks = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 let modalSource = 'assignment'; // 'assignment' or 'all'
 let modalYear = '2026';         // '2026', '2025', '2024', or 'all'
-let quizQuestionCount = 20;
+let quizQuestionCount = 'all';
 
 // Quiz State
 let quizQuestions = [];
@@ -281,9 +281,17 @@ function renderBrowseView() {
 
     container.appendChild(card);
   });
+
+  const scoreBadge = document.getElementById('browseScoreBadge');
+  if (scoreBadge) {
+    const answered = weekQuestions.filter(q => browseUserAnswers[q.id] !== undefined);
+    const correct = answered.filter(q => isCorrectOption(q, browseUserAnswers[q.id])).length;
+    scoreBadge.textContent = `${correct} correct`;
+  }
 }
 
 function handleBrowseOptionClick(qid, selectedOpt) {
+  if (browseUserAnswers[qid] !== undefined) return;
   browseUserAnswers[qid] = selectedOpt;
   renderBrowseView();
 }
@@ -336,6 +344,17 @@ function setModalSource(src) {
 }
 
 function setQuizQuestionCount(value, isCustom = false) {
+  if (value === 'all') {
+    quizQuestionCount = 'all';
+    document.querySelectorAll('#quizCountGroup .toggle-pill').forEach(pill => {
+      pill.classList.toggle('active', pill.dataset.count === 'all');
+    });
+    const customInput = document.getElementById('customQuizCount');
+    if (customInput) customInput.value = '';
+    updateModalStats();
+    return;
+  }
+
   const count = Number.parseInt(value, 10);
   if (!Number.isInteger(count) || count < 1) {
     if (isCustom) quizQuestionCount = null;
@@ -414,17 +433,20 @@ function updateModalStats() {
 
   const matchingQuestions = getFilteredQuizQuestions();
   const requestedCount = quizQuestionCount;
+  const selectedCount = requestedCount === 'all'
+    ? matchingQuestions.length
+    : requestedCount;
   const readyElem = document.getElementById('modalTotalAvailable');
   if (readyElem) {
-    readyElem.textContent = `${matchingQuestions.length} available • ${requestedCount || '—'} selected`;
+    readyElem.textContent = `${matchingQuestions.length} available • ${selectedCount || '—'} selected`;
   }
 
   const countHelp = document.getElementById('quizCountHelp');
   if (countHelp) {
     if (!requestedCount) {
       countHelp.textContent = 'Enter a whole number greater than 0.';
-    } else if (requestedCount > matchingQuestions.length) {
-      countHelp.textContent = `Only ${matchingQuestions.length} questions are available for the current filters.`;
+    } else if (requestedCount !== 'all' && requestedCount > matchingQuestions.length) {
+      countHelp.textContent = `The quiz will use all ${matchingQuestions.length} available questions.`;
     } else {
       countHelp.textContent = 'A random selection will be taken from the available questions.';
     }
@@ -432,9 +454,7 @@ function updateModalStats() {
 
   const startBtn = document.getElementById('startQuizBtn');
   if (startBtn) {
-    startBtn.disabled = matchingQuestions.length === 0
-      || !requestedCount
-      || requestedCount > matchingQuestions.length;
+    startBtn.disabled = false;
   }
 }
 
@@ -451,13 +471,16 @@ function startConfiguredQuiz() {
     alert('Please select at least one week with available questions.');
     return;
   }
-  if (!quizQuestionCount || quizQuestionCount > filtered.length) {
-    alert(`Please choose between 1 and ${filtered.length} questions.`);
+  if (!quizQuestionCount) {
+    alert('Please choose a valid number of questions.');
     return;
   }
 
   // Generate randomized questions AND randomized options
-  quizQuestions = prepareQuizQuestions(filtered, quizQuestionCount);
+  const questionCount = quizQuestionCount === 'all'
+    ? filtered.length
+    : Math.min(quizQuestionCount, filtered.length);
+  quizQuestions = prepareQuizQuestions(filtered, questionCount);
   quizCurrentIndex = 0;
   isQuizReviewMode = false;
 
@@ -585,9 +608,11 @@ function renderCurrentQuizQuestion() {
   const submitBtn = document.getElementById('quizSubmitBtn');
   if (state.submitted || isQuizReviewMode) {
     submitBtn.style.display = 'none';
-  } else {
+  } else if (shouldUseSubmitButton(q)) {
     submitBtn.style.display = 'inline-flex';
     submitBtn.disabled = state.selected.length === 0;
+  } else {
+    submitBtn.style.display = 'none';
   }
 
   // Explanation Box
@@ -645,6 +670,10 @@ function toggleQuizOption(idx) {
     else state.selected.push(idx);
   } else {
     state.selected = [idx];
+    if (!shouldUseSubmitButton(q)) {
+      submitQuizAnswer();
+      return;
+    }
   }
 
   document.querySelectorAll('#quizOptionsList .card-opt-item').forEach(el => {
@@ -656,6 +685,10 @@ function toggleQuizOption(idx) {
   if (submitBtn) {
     submitBtn.disabled = state.selected.length === 0;
   }
+}
+
+function shouldUseSubmitButton(q) {
+  return q.multiSelect || q.numeric === true || q.type === 'numeric' || q.inputType === 'number';
 }
 
 function submitQuizAnswer() {
