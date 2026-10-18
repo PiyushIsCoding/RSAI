@@ -1521,12 +1521,12 @@
     "id": 92,
     "week": 8,
     "source": "assignment",
-    "question": "Consider the following equation for LIME: What do the components and () represent?",
+    "question": "Consider the following equation for LIME:\nξ(x) = argmin_(g ∈ G) L(f, g, πₓ) + Ω(g)\n\nWhat do the components L and Ω(g) represent?",
     "options": [
-      "measures how unfaithful the explanation model is in approximating locally (weighted by , while () measures the complexity/interpretability penalty of the explanation model.",
-      "represents the global accuracy of the black-box model , and () represents the total number of convolutional layers.",
-      "is the adversarial perturbation budget, and () is the learning rate of the surrogate model.",
-      "calculates the exact Shapley values, and () computes the gradient with respect to input pixels."
+      "L measures how unfaithful the explanation model g is in approximating f locally (weighted by πₓ), while Ω(g) measures the complexity/interpretability penalty of the explanation model.",
+      "L represents the global accuracy of the black-box model f, and Ω(g) represents the total number of convolutional layers.",
+      "L is the adversarial perturbation budget, and Ω(g) is the learning rate of the surrogate model.",
+      "L calculates the exact Shapley values, and Ω(g) computes the gradient with respect to input pixels."
     ],
     "answer": 0,
     "multiSelect": false,
