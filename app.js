@@ -40,7 +40,7 @@ let browseSubmittedAnswers = {}; // map of qId -> whether the answer is locked
 // Modal Configuration State
 let modalSelectedWeeks = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 let modalSource = 'assignment'; // 'assignment' or 'all'
-let modalYear = '2026';         // '2026', '2025', '2024', or 'all'
+let modalYears = new Set([2026]); // Selected quiz years; an empty set is not allowed.
 let quizQuestionCount = 'all';
 
 // Quiz State
@@ -54,10 +54,16 @@ let isQuizReviewMode = false;
 // ============================================================
 document.addEventListener('DOMContentLoaded', async () => {
   await loadQuestionsData();
-  initSidebar();
-  renderBrowseView();
+  applyWeekRoute();
   initModalGrid();
 });
+
+window.addEventListener('hashchange', () => {
+  if (window.location.hash.startsWith('#/week/')) {
+    applyWeekRoute();
+  }
+});
+window.addEventListener('popstate', applyWeekRoute);
 
 async function loadQuestionsData() {
   if (window.RSAI_QUESTIONS && Array.isArray(window.RSAI_QUESTIONS)) {
@@ -89,6 +95,9 @@ function filterQuestions(questions, yearFilter, sourceFilter, weekFilter = null)
     if (sourceFilter === 'assignment' && q.source !== 'assignment') return false;
 
     // 3. Year matching
+    if (yearFilter instanceof Set) {
+      return yearFilter.has(q.year);
+    }
     if (yearFilter !== 'all') {
       const targetYear = parseInt(yearFilter, 10);
       return q.year === targetYear;
@@ -112,6 +121,9 @@ function initSidebar() {
     const item = document.createElement('div');
     item.className = `nav-week-item ${w.week === currentBrowseWeek ? 'active' : ''}`;
     item.dataset.week = w.week;
+    item.setAttribute('role', 'link');
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('aria-current', w.week === currentBrowseWeek ? 'page' : 'false');
 
     const formattedNum = String(w.week).padStart(2, '0');
     item.innerHTML = `
@@ -124,6 +136,12 @@ function initSidebar() {
       selectWeek(w.week);
       const sb = document.getElementById('sidebar');
       if (sb) sb.classList.remove('open');
+    });
+    item.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        item.click();
+      }
     });
 
     nav.appendChild(item);
@@ -144,16 +162,55 @@ function onSidebarYearChange(val) {
 }
 
 function selectWeek(weekNum) {
+  if (!WEEK_METADATA.some(meta => meta.week === weekNum)) return;
   currentBrowseWeek = weekNum;
 
   document.querySelectorAll('.nav-week-item').forEach(el => {
-    el.classList.toggle('active', parseInt(el.dataset.week, 10) === weekNum);
+    const isActive = parseInt(el.dataset.week, 10) === weekNum;
+    el.classList.toggle('active', isActive);
+    el.setAttribute('aria-current', isActive ? 'page' : 'false');
   });
+
+  const route = getWeekRoute(weekNum);
+  if (window.location.hash !== route) {
+    window.history.pushState({ week: weekNum }, '', route);
+  }
 
   switchView('browseView');
   renderBrowseView();
 
   const meta = WEEK_METADATA.find(m => m.week === weekNum);
+  if (meta) {
+    document.title = `Week ${meta.week}: ${meta.title} — RSAI Recall`;
+  }
+}
+
+function getWeekRoute(weekNum) {
+  return `#/week/${weekNum}`;
+}
+
+function getWeekFromRoute() {
+  const match = window.location.hash.match(/^#\/week\/(\d+)\/?$/);
+  if (!match) return null;
+
+  const weekNum = parseInt(match[1], 10);
+  return WEEK_METADATA.some(meta => meta.week === weekNum) ? weekNum : null;
+}
+
+function applyWeekRoute() {
+  const routeWeek = getWeekFromRoute() || 1;
+  currentBrowseWeek = routeWeek;
+
+  const canonicalRoute = getWeekRoute(routeWeek);
+  if (window.location.hash !== canonicalRoute) {
+    window.history.replaceState({ week: routeWeek }, '', canonicalRoute);
+  }
+
+  initSidebar();
+  switchView('browseView');
+  renderBrowseView();
+
+  const meta = WEEK_METADATA.find(item => item.week === routeWeek);
   if (meta) {
     document.title = `Week ${meta.week}: ${meta.title} — RSAI Recall`;
   }
@@ -396,9 +453,29 @@ function closeQuizModal() {
 }
 
 function setModalYear(yearVal) {
-  modalYear = yearVal;
+  if (yearVal === 'all') {
+    modalYears = new Set([2024, 2025, 2026]);
+  } else {
+    const year = Number.parseInt(yearVal, 10);
+    if (!Number.isInteger(year)) return;
+
+    if (modalYears.size === 3) {
+      modalYears = new Set([year]);
+    } else if (modalYears.has(year)) {
+      if (modalYears.size === 1) return;
+      modalYears.delete(year);
+    } else {
+      modalYears.add(year);
+    }
+  }
+
   document.querySelectorAll('#modalYearGroup .toggle-pill').forEach(p => {
-    p.classList.toggle('active', p.dataset.year === yearVal);
+    const pillYear = p.dataset.year;
+    const isAll = pillYear === 'all';
+    const isActive = isAll
+      ? modalYears.size === 3
+      : modalYears.has(Number.parseInt(pillYear, 10));
+    p.classList.toggle('active', isActive);
   });
   initModalGrid();
   updateModalStats();
@@ -455,7 +532,7 @@ function initModalGrid() {
     card.className = `modal-week-card ${isSelected ? 'selected' : ''}`;
     card.dataset.week = w.week;
 
-    const count = filterQuestions(allQuestions, modalYear, modalSource, w.week).length;
+    const count = filterQuestions(allQuestions, modalYears, modalSource, w.week).length;
 
     card.innerHTML = `
       <span class="mwc-num">Week ${w.week}</span>
@@ -529,7 +606,7 @@ function updateModalStats() {
 }
 
 function getFilteredQuizQuestions() {
-  return filterQuestions(allQuestions, modalYear, modalSource, modalSelectedWeeks);
+  return filterQuestions(allQuestions, modalYears, modalSource, modalSelectedWeeks);
 }
 
 // ============================================================
