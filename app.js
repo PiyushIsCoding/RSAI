@@ -34,7 +34,8 @@ let currentBrowseWeek = 1;
 let browseSource = 'assignment'; // 'assignment' or 'all'
 let selectedBrowseYear = '2026';  // '2026', '2025', '2024', or 'all'
 let showAnswersMode = false;
-let browseUserAnswers = {}; // map of qId -> selectedOptionIndex
+let browseUserAnswers = {}; // map of qId -> selected option index or indices
+let browseSubmittedAnswers = {}; // map of qId -> whether the answer is locked
 
 // Modal Configuration State
 let modalSelectedWeeks = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
@@ -217,7 +218,10 @@ function renderBrowseView() {
 
     const formattedIndex = String(idx + 1).padStart(2, '0');
     const userSelected = browseUserAnswers[q.id];
-    const isAnswered = userSelected !== undefined;
+    const isSubmitted = browseSubmittedAnswers[q.id] === true;
+    const isAnswered = userSelected !== undefined && isSubmitted;
+    const selectedOptions = Array.isArray(userSelected) ? userSelected : [userSelected];
+    const requiresBrowseSubmit = shouldUseSubmitButton(q);
 
     // Year badge string
     const yearLabel = q.year === 'all' ? 'Lecture Notes' : `${q.year} PYQ`;
@@ -233,8 +237,10 @@ function renderBrowseView() {
         else extraClass = 'locked';
       } else if (isAnswered) {
         if (isExpected) extraClass = 'correct locked';
-        else if (userSelected === optIdx) extraClass = 'wrong locked';
+        else if (selectedOptions.includes(optIdx)) extraClass = 'wrong locked';
         else extraClass = 'locked';
+      } else if (selectedOptions.includes(optIdx)) {
+        extraClass = 'selected';
       }
 
       optionsHtml += `
@@ -267,32 +273,72 @@ function renderBrowseView() {
       <div class="card-options-list">
         ${optionsHtml}
       </div>
+      ${requiresBrowseSubmit && !isSubmitted && !showAnswersMode ? `
+        <button class="btn-action btn-submit browse-submit-btn" type="button" ${selectedOptions.length === 0 || selectedOptions[0] === undefined ? 'disabled' : ''}>
+          Submit Answer
+        </button>
+      ` : ''}
       ${expHtml}
     `;
 
     card.querySelectorAll('.card-opt-item').forEach(item => {
       item.addEventListener('click', () => {
-        if (showAnswersMode) return;
+        if (showAnswersMode || isSubmitted) return;
         const qid = parseInt(item.dataset.qid, 10);
         const opt = parseInt(item.dataset.opt, 10);
         handleBrowseOptionClick(qid, opt);
       });
     });
 
+    const submitButton = card.querySelector('.browse-submit-btn');
+    if (submitButton) {
+      submitButton.addEventListener('click', () => submitBrowseAnswer(q.id));
+    }
+
     container.appendChild(card);
   });
 
   const scoreBadge = document.getElementById('browseScoreBadge');
   if (scoreBadge) {
-    const answered = weekQuestions.filter(q => browseUserAnswers[q.id] !== undefined);
-    const correct = answered.filter(q => isCorrectOption(q, browseUserAnswers[q.id])).length;
+    const answered = weekQuestions.filter(q => browseSubmittedAnswers[q.id] === true);
+    const correct = answered.filter(q => {
+      const selected = browseUserAnswers[q.id];
+      if (q.multiSelect) {
+        const expected = (Array.isArray(q.answer) ? q.answer : [q.answer]).sort();
+        const given = (Array.isArray(selected) ? selected : [selected]).sort();
+        return JSON.stringify(expected) === JSON.stringify(given);
+      }
+      return isCorrectOption(q, selected);
+    }).length;
     scoreBadge.textContent = `${correct} correct`;
   }
 }
 
 function handleBrowseOptionClick(qid, selectedOpt) {
-  if (browseUserAnswers[qid] !== undefined) return;
-  browseUserAnswers[qid] = selectedOpt;
+  if (browseSubmittedAnswers[qid] === true) return;
+  const question = allQuestions.find(q => q.id === qid);
+  if (!question) return;
+
+  if (question.multiSelect) {
+    const selected = Array.isArray(browseUserAnswers[qid]) ? browseUserAnswers[qid] : [];
+    const position = selected.indexOf(selectedOpt);
+    if (position >= 0) selected.splice(position, 1);
+    else selected.push(selectedOpt);
+    browseUserAnswers[qid] = selected;
+  } else {
+    browseUserAnswers[qid] = selectedOpt;
+    if (!shouldUseSubmitButton(question)) {
+      browseSubmittedAnswers[qid] = true;
+    }
+  }
+  renderBrowseView();
+}
+
+function submitBrowseAnswer(qid) {
+  if (browseSubmittedAnswers[qid] === true) return;
+  const selected = browseUserAnswers[qid];
+  if (selected === undefined || (Array.isArray(selected) && selected.length === 0)) return;
+  browseSubmittedAnswers[qid] = true;
   renderBrowseView();
 }
 
