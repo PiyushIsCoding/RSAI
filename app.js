@@ -509,7 +509,7 @@ function getFilteredQuizQuestions() {
 }
 
 // ============================================================
-// QUIZ ENGINE (WITH QUESTION & OPTION SHUFFLING)
+// QUIZ ENGINE (WITH QUESTION SHUFFLING)
 // ============================================================
 function startConfiguredQuiz() {
   const filtered = getFilteredQuizQuestions();
@@ -522,7 +522,7 @@ function startConfiguredQuiz() {
     return;
   }
 
-  // Generate randomized questions AND randomized options
+  // Generate randomized questions while preserving 2026 option order.
   const questionCount = quizQuestionCount === 'all'
     ? filtered.length
     : Math.min(quizQuestionCount, filtered.length);
@@ -550,8 +550,8 @@ function startConfiguredQuiz() {
 }
 
 /**
- * Shuffles questions AND shuffles options within each question,
- * while accurately re-mapping the correct answer indices!
+ * Shuffles questions and, for years other than 2026, shuffles options
+ * while accurately re-mapping the correct answer indices.
  */
 function prepareQuizQuestions(questions, questionCount = questions.length) {
   const list = questions.map(q => JSON.parse(JSON.stringify(q)));
@@ -565,8 +565,11 @@ function prepareQuizQuestions(questions, questionCount = questions.length) {
   // Keep only the requested number of randomly selected questions.
   list.length = questionCount;
 
-  // 2. Shuffle options inside each question
+  // 2. Preserve the source option order for 2026. The other question banks
+  // retain their existing randomized option behavior.
   list.forEach(q => {
+    if (q.year === 2026) return;
+
     const originalOptions = q.options;
     const isCorrectFn = (idx) => Array.isArray(q.answer) ? q.answer.includes(idx) : q.answer === idx;
 
