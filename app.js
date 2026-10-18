@@ -222,6 +222,7 @@ function renderBrowseView() {
     const isAnswered = userSelected !== undefined && isSubmitted;
     const selectedOptions = Array.isArray(userSelected) ? userSelected : [userSelected];
     const requiresBrowseSubmit = shouldUseSubmitButton(q);
+    const numericInputQuestion = isNumericInputQuestion(q);
 
     // Year badge string
     const yearLabel = q.year === 'all' ? 'Lecture Notes' : `${q.year} PYQ`;
@@ -250,6 +251,14 @@ function renderBrowseView() {
         </div>
       `;
     });
+    if (numericInputQuestion) {
+      const numericValue = userSelected === undefined ? '' : String(userSelected);
+      optionsHtml = `
+        <input class="numeric-answer-input" type="number" step="any"
+          value="${escapeHtml(numericValue)}" placeholder="Enter your answer"
+          aria-label="Numerical answer" ${isSubmitted || showAnswersMode ? 'disabled' : ''}>
+      `;
+    }
 
     // Explanation HTML
     const showExp = showAnswersMode || isAnswered;
@@ -265,7 +274,7 @@ function renderBrowseView() {
         <div style="flex:1;">
           <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">
             <span class="year-badge" style="font-size:0.7rem; padding:0.15rem 0.5rem;">${yearLabel}</span>
-            <span style="font-size:0.72rem; color:var(--text-dim); text-transform:uppercase; font-family:var(--font-mono);">${q.multiSelect ? 'Select all that apply' : 'Single Choice'}</span>
+            <span style="font-size:0.72rem; color:var(--text-dim); text-transform:uppercase; font-family:var(--font-mono);">${numericInputQuestion ? 'Numerical Answer' : (q.multiSelect ? 'Select all that apply' : 'Single Choice')}</span>
           </div>
           <h2 class="card-q-text">${escapeHtml(q.question)}</h2>
         </div>
@@ -290,6 +299,17 @@ function renderBrowseView() {
       });
     });
 
+    const numericInput = card.querySelector('.numeric-answer-input');
+    if (numericInput) {
+      numericInput.addEventListener('input', () => {
+        if (!showAnswersMode && !isSubmitted) {
+          browseUserAnswers[q.id] = numericInput.value;
+          const submitButton = card.querySelector('.browse-submit-btn');
+          if (submitButton) submitButton.disabled = numericInput.value.trim() === '';
+        }
+      });
+    }
+
     const submitButton = card.querySelector('.browse-submit-btn');
     if (submitButton) {
       submitButton.addEventListener('click', () => submitBrowseAnswer(q.id));
@@ -308,6 +328,9 @@ function renderBrowseView() {
         const given = (Array.isArray(selected) ? selected : [selected]).sort();
         return JSON.stringify(expected) === JSON.stringify(given);
       }
+      if (isNumericInputQuestion(q)) {
+        return Number(selected) === Number(q.answer);
+      }
       return isCorrectOption(q, selected);
     }).length;
     scoreBadge.textContent = `${correct} correct`;
@@ -318,6 +341,7 @@ function handleBrowseOptionClick(qid, selectedOpt) {
   if (browseSubmittedAnswers[qid] === true) return;
   const question = allQuestions.find(q => q.id === qid);
   if (!question) return;
+  if (isNumericInputQuestion(question)) return;
 
   if (question.multiSelect) {
     const selected = Array.isArray(browseUserAnswers[qid]) ? browseUserAnswers[qid] : [];
@@ -337,7 +361,7 @@ function handleBrowseOptionClick(qid, selectedOpt) {
 function submitBrowseAnswer(qid) {
   if (browseSubmittedAnswers[qid] === true) return;
   const selected = browseUserAnswers[qid];
-  if (selected === undefined || (Array.isArray(selected) && selected.length === 0)) return;
+  if (selected === undefined || selected === '' || (Array.isArray(selected) && selected.length === 0)) return;
   browseSubmittedAnswers[qid] = true;
   renderBrowseView();
 }
@@ -534,6 +558,7 @@ function startConfiguredQuiz() {
   for (let i = 0; i < quizQuestions.length; i++) {
     quizUserAnswers[i] = {
       selected: [],
+      numericAnswer: '',
       submitted: false,
       isCorrect: false
     };
@@ -611,7 +636,9 @@ function renderCurrentQuizQuestion() {
   // Meta tags
   document.getElementById('quizWeekTag').textContent = `Week ${q.week}`;
   document.getElementById('quizSourceTag').textContent = `${yearText} • ${q.source === 'assignment' ? 'Assignment' : 'Study Notes'}`;
-  document.getElementById('quizTypeTag').textContent = q.multiSelect ? 'Select all that apply' : 'Single Choice';
+  document.getElementById('quizTypeTag').textContent = isNumericInputQuestion(q)
+    ? 'Numerical Answer'
+    : (q.multiSelect ? 'Select all that apply' : 'Single Choice');
 
   // Question number & text
   document.getElementById('quizQNum').textContent = String(quizCurrentIndex + 1).padStart(2, '0');
@@ -652,6 +679,21 @@ function renderCurrentQuizQuestion() {
 
     container.appendChild(item);
   });
+  if (isNumericInputQuestion(q)) {
+    const numericInput = document.createElement('input');
+    numericInput.className = 'numeric-answer-input';
+    numericInput.type = 'number';
+    numericInput.step = 'any';
+    numericInput.placeholder = 'Enter your answer';
+    numericInput.value = state.numericAnswer;
+    numericInput.disabled = state.submitted || isQuizReviewMode;
+    numericInput.setAttribute('aria-label', 'Numerical answer');
+    numericInput.addEventListener('input', () => {
+      state.numericAnswer = numericInput.value;
+      submitBtn.disabled = numericInput.value.trim() === '';
+    });
+    container.appendChild(numericInput);
+  }
 
   // Submit button
   const submitBtn = document.getElementById('quizSubmitBtn');
@@ -659,7 +701,9 @@ function renderCurrentQuizQuestion() {
     submitBtn.style.display = 'none';
   } else if (shouldUseSubmitButton(q)) {
     submitBtn.style.display = 'inline-flex';
-    submitBtn.disabled = state.selected.length === 0;
+    submitBtn.disabled = isNumericInputQuestion(q)
+      ? state.numericAnswer.trim() === ''
+      : state.selected.length === 0;
   } else {
     submitBtn.style.display = 'none';
   }
@@ -683,6 +727,8 @@ function renderCurrentQuizQuestion() {
     if (Array.isArray(q.answer)) {
       const letters = q.answer.map(a => prefixes[a] || (a + 1)).join(', ');
       correctText = `<strong>Correct Option(s):</strong> ${letters}<br>`;
+    } else if (isNumericInputQuestion(q)) {
+      correctText = `<strong>Correct Answer:</strong> ${q.answer}<br>`;
     } else if (typeof q.answer === 'number') {
       correctText = `<strong>Correct Option:</strong> ${prefixes[q.answer] || (q.answer + 1)}<br>`;
     }
@@ -740,15 +786,27 @@ function shouldUseSubmitButton(q) {
   return q.multiSelect || isNumericQuestion(q);
 }
 
+function isNumericInputQuestion(q) {
+  return q.numeric === true || q.type === 'numeric' || q.inputType === 'number';
+}
+
 function isNumericQuestion(q) {
-  if (q.numeric === true || q.type === 'numeric' || q.inputType === 'number') return true;
+  if (isNumericInputQuestion(q)) return true;
   return /\b(calculate|compute|estimate|formula|how many|numerical|numeric|round to|what is the value)\b/i.test(q.question);
 }
 
 function submitQuizAnswer() {
   const q = quizQuestions[quizCurrentIndex];
   const state = quizUserAnswers[quizCurrentIndex];
-  if (state.selected.length === 0 || state.submitted) return;
+  if (state.submitted) return;
+  if (isNumericInputQuestion(q)) {
+    if (state.numericAnswer.trim() === '') return;
+    state.submitted = true;
+    state.isCorrect = Number(state.numericAnswer) === Number(q.answer);
+    renderCurrentQuizQuestion();
+    return;
+  }
+  if (state.selected.length === 0) return;
 
   state.submitted = true;
 
@@ -928,7 +986,8 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     e.preventDefault();
     const state = quizUserAnswers[quizCurrentIndex];
-    if (state && !state.submitted && !isQuizReviewMode && state.selected.length > 0) {
+    if (state && !state.submitted && !isQuizReviewMode &&
+      (isNumericInputQuestion(q) ? state.numericAnswer.trim() !== '' : state.selected.length > 0)) {
       submitQuizAnswer();
     } else {
       nextQuizQuestion();

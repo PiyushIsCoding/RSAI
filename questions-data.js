@@ -37,7 +37,7 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the lecture, why is \"proxy gaming\" considered a failure mode in AI systems?",
     "options": [
-      "Agents over-optimize faulty metrics, producing outcomes misaligned with true human values",
+      "Agents over-optimize fault metrics, producing outcomes misaligned with true human values",
       "AI systems consume excessive computational resources unnecessarily",
       "AI systems are used to cheat in video games",
       "It results from hardware failure during large-scale simulations"
@@ -177,10 +177,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the risk decomposition framework, which combination of factors would result in the HIGHEST risk from an AI system?",
     "options": [
-      "High vulnerability, high hazard exposure, high hazard severity",
-      "Low vulnerability, high hazard exposure, low hazard severity",
-      "Low vulnerability, low hazard exposure, high hazard severity",
-      "High vulnerability, low hazard exposure, high hazard severity"
+      "High vulnerability, high hazard exposure, high hazard severity.",
+      "Low vulnerability, high hazard exposure, low hazard severity.",
+      "Low vulnerability, low hazard exposure, high hazard severity.",
+      "High vulnerability, low hazard exposure, high hazard severity."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -193,10 +193,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the lecture, which of the following about the AI race is true?",
     "options": [
-      "AI systems naturally become safer as they grow more powerful",
-      "The AI race reduces the need for regulation and monitoring",
-      "It ensures faster AI development that guarantees equal benefits for all nations",
-      "AI competition may push to speed up development while giving up oversight"
+      "AI systems naturally become safer as they grow more powerful.",
+      "The AI race reduces the need for regulation and monitoring.",
+      "It ensures faster AI development that guarantees equal benefits for all nations.",
+      "AI competition may push to speed up development while giving up oversight."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -209,10 +209,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What are \"Black Swans\"?",
     "options": [
-      "Frequent events with predictable and minor impacts",
-      "Outlier events that often have extreme and unpredictable impacts",
-      "Known risks that are intentionally ignored during model training",
-      "Events that follow a thin-tailed distribution and have negligible consequences"
+      "Frequent events with predictable and minor impacts.",
+      "Outlier events that often have extreme and unpredictable impacts.",
+      "Known risks that are intentionally ignored during model training.",
+      "Events that follow a thin-tailed distribution and have negligible consequences."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -262,10 +262,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is \"transferability\" in the context of adversarial attacks?",
     "options": [
-      "The ability to move a model from a secure state to a vulnerable state",
-      "The phenomenon where adversarial examples crafted for one model also fool another model",
-      "Converting a black-box model into a white-box model",
-      "The process of retraining a model on adversarial attacks"
+      "The ability to move a model from a secure state to a vulnerable state.",
+      "The phenomenon where adversarial examples crafted for one model also fool another model.",
+      "Converting a black-box model into a white-box model.",
+      "The process of retraining a model on adversarial attacks."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -278,10 +278,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the lecture, what is a common trade-off when using Adversarial Training to improve robustness?",
     "options": [
-      "It requires a significantly larger dataset than normal training",
-      "It can significantly reduce the accuracy on clean examples",
-      "It only works for simple binary classifiers",
-      "It requires a low-variance dataset to function effectively"
+      "It requires a significantly larger dataset than normal training.",
+      "It can significantly reduce the accuracy on clean examples.",
+      "It only works for simple binary classifiers.",
+      "It requires a low-variance dataset to function effectively."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -294,10 +294,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following are challenges associated with direct human ratings when modeling preferences? (Select all that apply.)",
     "options": [
-      "Human-in-the-loop evaluation is expensive and time-consuming",
-      "Direct ratings require white-box access to the model",
-      "Human ratings are always completely objective and free from annotator bias",
-      "Human judgments are noisy and miscalibrated"
+      "Human-in-the-loop evaluation is expensive and time-consuming.",
+      "Direct ratings require white-box access to the model.",
+      "Human ratings are always completely objective and free from annotator bias.",
+      "Human judgments are noisy and miscalibrated."
     ],
     "answer": [
       0,
@@ -329,10 +329,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the first step of the RLHF pipeline?",
     "options": [
-      "Collecting comparison data and training a reward model",
-      "Optimizing a policy against the reward model using reinforcement learning",
-      "Collecting demonstration data and training a supervised policy",
-      "Performing external white-box auditing of the pretrained model"
+      "Collecting comparison data and training a reward model.",
+      "Optimizing a policy against the reward model using reinforcement learning.",
+      "Collecting demonstration data and training a supervised policy.",
+      "Performing external white-box auditing of the pretrained model."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -345,10 +345,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Why is black-box access insufficient for rigorous AI audits?",
     "options": [
-      "It is too expensive for external auditors",
-      "It does not allow for human-in-the-loop feedback",
-      "It prevents the use of reinforcement learning",
-      "It only allows auditors to query the system and observe outputs"
+      "It is too expensive for external auditors.",
+      "It does not allow for human-in-the-loop feedback.",
+      "It prevents the use of reinforcement learning.",
+      "It only allows auditors to query the system and observe outputs."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -359,7 +359,7 @@ window.RSAI_QUESTIONS = [
     "id": 22,
     "week": 2,
     "source": "assignment",
-    "question": "According to the lecture, what does the Kullback–Leibler (KL) divergence penalty prevent in RLHF?",
+    "question": "According to the lecture, what does the Kullback�Leibler (KL) divergence penalty prevent in RLHF?",
     "options": [
       "The reward model from becoming too complex",
       "The policy model from diverging too far from the initial pretrained model",
@@ -377,10 +377,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following is true? (Select all that apply.)",
     "options": [
-      "Extremistan has thin tails while Mediocristan has long tails",
-      "Extremistan is determined by many small events",
-      "Mediocristan is the tyranny of the collective",
-      "Extremistan's impact is potentially scalable"
+      "Extremistan has thin tails while Medicristan has long tails.",
+      "Extremistan is determined by many small events.",
+      "Mediocristan is the tyranny of the collective.",
+      "Extremistan's impact is potentially scalable."
     ],
     "answer": [
       2,
@@ -396,10 +396,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Identify the equations that can lead to a long-tailed distribution.",
     "options": [
-      "Idea × student × resources × time",
-      "Idea × student + resources × time",
+      "Idea * student * resources * time",
+      "Idea * student + resources * time",
       "Idea + student + resource + time",
-      "Idea - student × resource - time"
+      "Idea - student * resource - time"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -410,12 +410,12 @@ window.RSAI_QUESTIONS = [
     "id": 25,
     "week": 3,
     "source": "assignment",
-    "question": "Match the unlearning method to their corresponding concept:\n1) Exact unlearning\n2) Unlearning via Differential Privacy\n3) Example Unlearning\n4) Concept Unlearning\n\ni) Unlearned model and retrained model are distributionally close\nii) The forget set is clearly defined\niii) The forget set is not clearly defined\niv) Unlearned model and retrained model are distributionally identical",
+    "question": "Match the unlearning method to their corresponding concept. 1) Exact unlearning i) Unlearned model and retrained model are distributionally close 2) Unlearning via Differential Privacy ii) The forget set is clearly defined 3) Example Unlearning iii) The forget set is not clearly defined 4) Concept Unlearning iv) Unlearned model and retrained model are distributionally identical",
     "options": [
-      "1→i, 2→iv, 3→iii, 4→ii",
-      "1→i, 2→iv, 3→ii, 4→iii",
-      "1→iv, 2→i, 3→iii, 4→ii",
-      "1→iv, 2→i, 3→ii, 4→iii"
+      "1 -> i, 2-> iv, 3-> iii, 4-> ii",
+      "1 -> i, 2-> iv, 3-> ii, 4-> iii",
+      "1 -> iv, 2-> i, 3-> iii, 4-> ii",
+      "1 -> iv, 2-> i, 3-> ii, 4-> iii"
     ],
     "answer": 3,
     "multiSelect": false,
@@ -428,10 +428,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the primary goal of \"Machine Unlearning\"?",
     "options": [
-      "To increase the training speed of a model",
-      "To add more data to an existing model without retraining",
-      "To remove the influence of specific training data from a trained model",
-      "To improve the accuracy of a model on new, unseen data"
+      "To increase the training speed of a model.",
+      "To add more data to an existing model without retraining.",
+      "To remove the influence of specific training data from a trained model.",
+      "To improve the accuracy of a model on new, unseen data."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -460,10 +460,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the SISA framework, what is the benefit of using \"shards\" and \"slices\"?",
     "options": [
-      "It increases the overall accuracy of the model",
-      "It ensures that unlearned data never contributes to other components",
-      "It allows the model to learn from toxic data safely",
-      "It eliminates the need for any retraining"
+      "It increases the overall accuracy of the model.",
+      "It ensures that unlearned data never contributes to other components.",
+      "It allows the model to learn from toxic data safely.",
+      "It eliminates the need for any retraining."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -476,10 +476,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is \"Membership Inference Attack\"?",
     "options": [
-      "To distinguish whether specific training data was used to train a model",
-      "To add new members to a training dataset",
-      "To speed up the unlearning process",
-      "To verify the architecture of the model"
+      "To distinguish whether specific training data was used to train a model.",
+      "To add new members to a training dataset.",
+      "To speed up the unlearning process.",
+      "To verify the architecture of the model."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -508,10 +508,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the lecture, what is \"Representation Engineering\"?",
     "options": [
-      "A bottom-up approach focusing on individual neurons",
-      "Modifying representation vectors to control model traits",
-      "A method for increasing the parameter count of a model",
-      "Re-labeling all data points in a dataset to fix biases"
+      "A bottom-up approach focusing on individual neurons.",
+      "Modifying representation vectors to control model traits.",
+      "A method for increasing the parameter count of a model.",
+      "Re-labeling all data points in a dataset to fix biases."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -524,10 +524,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the context of the SISA framework, how does the system minimize the cost of retraining when a data point must be unlearned?",
     "options": [
-      "By using gradient ascent on only the affected data points",
-      "By applying a differential privacy constraint to the aggregation layer",
-      "By flipping the labels of the forget set and performing few-shot",
-      "By retraining only the constituent model whose shards contain the point to be unlearned"
+      "By using gradient ascent on only the affected data points.",
+      "By applying a differential privacy constraint to the aggregation layer.",
+      "By flipping the labels of the forget set and performing few-shot.",
+      "By retraining only the constituent model whose shards contain the point to be unlearned."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -538,12 +538,12 @@ window.RSAI_QUESTIONS = [
     "id": 33,
     "week": 3,
     "source": "assignment",
-    "question": "Why is unlearning fundamental facts like \"the sun rises every day\" considered more difficult than unlearning infrequent textual occurrences?",
+    "question": "According to the lecture, why is unlearning fundamental facts like \"the sun rises every day\" considered more difficult than unlearning infrequent textual occurrences, such as car accidents?",
     "options": [
-      "Fundamental knowledge is deeply embedded in the model's implicit knowledge graph",
-      "Fundamental facts are typically protected by guardrails",
-      "Models are primarily trained on Wikipedia, which contains these facts",
-      "Differential privacy guarantees fall off more quickly for fundamental facts"
+      "Fundamental knowledge is deeply embedded in the model's implicit knowledge graph.",
+      "Fundamental facts are typically protected by guardrails.",
+      "Models are primarily trained on Wikipedia, which contains these facts.",
+      "Differential privacy guarantees fall off more quickly for fundamental facts."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -595,7 +595,7 @@ window.RSAI_QUESTIONS = [
       "GraphEraser",
       "GUIDE",
       "Projector",
-      "GraphEditor",
+      "GraphdEditor",
       "GNNDelete",
       "MEGU"
     ],
@@ -613,10 +613,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does the definition of \"bias\" in CS/ML differ from Statistics?",
     "options": [
-      "Statistics focuses on societal values, while CS/ML focuses on mathematical deviations",
-      "Statistics defines it as a systematic error in data collection/interpretation, while CS/ML defines it as a systematic favoritism towards certain groups/outcomes",
-      "CS/ML focuses on rationality in judgment, while Statistics focuses on algorithmic performance",
-      "There is no difference; both define bias as a systematic deviation from rationality"
+      "Statistics focuses on societal values, while CS/ML focuses on mathematical deviations.",
+      "Statistics defines it as a systematic error in data collection/interpretation, while CS/ML defines it as a systematic favoritism towards certain groups/outcomes.",
+      "CS/ML focuses on rationality in judgment, while Statistics focuses on algorithmic performance.",
+      "There is no difference; both define bias as a systematic deviation from rationality."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -629,10 +629,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "According to the slides, when does bias become a problem?",
     "options": [
-      "Bias is a problem at all times because humans are not perfect",
-      "It is only a problem when it occurs in the data collection phase",
-      "It is only a problem when it can have a negative impact",
-      "It is only a problem when the model is not 100% accurate"
+      "Bias is a problem at all times because humans are not perfect.",
+      "It is only a problem when it occurs in the data collection phase.",
+      "It is only a problem when it can have a negative impact.",
+      "It is only a problem when the model is not 100% accurate."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -648,7 +648,7 @@ window.RSAI_QUESTIONS = [
       "Demographic Parity Score",
       "Perspective API Score",
       "Legal Grounding Score",
-      "β-weighted Legal Safety Score"
+      "-weighted Legal Safety Score"
     ],
     "answer": 3,
     "multiSelect": false,
@@ -661,10 +661,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What was the primary issue with Microsoft's chatbot \"Tay\"?",
     "options": [
-      "It was unable to process text correctly",
-      "It posted unintended offensive tweets due to malicious user intent",
-      "It could only generate content related to the United States",
-      "It was too slow to respond to users"
+      "It was unable to process text correctly.",
+      "It posted unintended offensive tweets due to malicious user intent.",
+      "It could only generate content related to the United States.",
+      "It was too slow to respond to users."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -677,10 +677,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Analysis of AI-generated images from Midjourney showed which of the following biases regarding specialized roles?",
     "options": [
-      "Only younger women were shown in specialized roles",
-      "Only older men were shown in specialized roles",
-      "Older women were frequently depicted as news analysts",
-      "Specialized roles always featured diverse racial representation"
+      "Only younger women were shown in specialized roles.",
+      "Only older men were shown in specialized roles.",
+      "Older women were frequently depicted as news analysts.",
+      "Specialized roles always featured diverse racial representation."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -730,10 +730,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following is a \"latent\" design choice that can lead to bias in a dataset?",
     "options": [
-      "Choosing to use only English-language phrases",
-      "Using systematic favoritism towards a specific outcome",
-      "Manually editing every data point to be offensive",
-      "Refusing to use any AI models in production"
+      "Choosing to use only English-language phrases.",
+      "Using systematic favoritism towards a specific outcome.",
+      "Manually editing every data point to be offensive.",
+      "Refusing to use any AI models in production."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -746,11 +746,12 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following is the correct setting for contrastive learning? (Select all that apply.)",
     "options": [
-      "Irrespective of the sentences, minimise the distance between their embeddings",
-      "Irrespective of the sentences, maximise the distance between their embeddings",
-      "If sentences are similar, minimise the distance between their embeddings",
-      "If sentences are different, minimise the distance between their embeddings",
-      "If sentences are different, maximise the distance between their embeddings"
+      "Irrespective of the sentences, minimise the distance between their embeddings.",
+      "Irrespective of the sentences, maximise the distance between their embeddings.",
+      "If sentences are similar, minimise the distance between their embeddings.",
+      "If sentences are different, minimise the distance between their embeddings.",
+      "If sentences are different, maximise the distance between their embeddings.",
+      "If sentences are different, minimise the distance between their embeddings"
     ],
     "answer": [
       2,
@@ -766,10 +767,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is a \"stereotype\"?",
     "options": [
-      "A factual statement that applies to all humans",
-      "A scientifically proven characteristic",
-      "A legal rule used to govern a society",
-      "A widely held belief about some group"
+      "A factual statement that applies to all humans.",
+      "A scientifically proven characteristic.",
+      "A legal rule used to govern a society.",
+      "A widely held belief about some group."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -780,7 +781,7 @@ window.RSAI_QUESTIONS = [
     "id": 47,
     "week": 4,
     "source": "assignment",
-    "question": "A sentiment-analysis model is trained on reviews mostly with extreme opinions. The model is less able to predict sentiment of reviews using subtle language. Which type of bias is this?",
+    "question": "A sentiment-analysis model is trained to predict whether book reviews are positive or negative based on a corpus of user submissions to a popular website. The majority of reviews in the training dataset reflect extreme opinions (reviewers who either loved or hated a book), because people were less likely to submit a review of a book if they did not respond to it strongly. As a result, the model is less able to correctly predict the sentiment of reviews that use more subtle language to describe a book. Which type of bias is this?",
     "options": [
       "Reporting bias",
       "Historical bias",
@@ -796,7 +797,7 @@ window.RSAI_QUESTIONS = [
     "id": 48,
     "week": 4,
     "source": "assignment",
-    "question": "As per the lecture, which of the following is a category of bias? (Select all that apply.)",
+    "question": "As per the lecture, which of the following is a/are a category of bias? (Select all that apply.)",
     "options": [
       "Gender",
       "Race",
@@ -817,7 +818,7 @@ window.RSAI_QUESTIONS = [
     "id": 49,
     "week": 5,
     "source": "assignment",
-    "question": "What should be the language modelling score (lms) for an ideal model in the StereoSet benchmark?",
+    "question": "What should be the language modelling (lms) for an ideal model in the StereoSet benchmark?",
     "options": [
       "25",
       "50",
@@ -835,10 +836,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the CrowS-Pairs benchmark, what does a score of 100% indicate?",
     "options": [
-      "The model has no social bias",
-      "The model always prefers anti-stereotypical sentences",
-      "The model always prefers stereotypical sentences",
-      "The model is an ideal language model"
+      "The model has no social bias.",
+      "The model always prefers anti-stereotypical sentences.",
+      "The model always prefers stereotypical sentences.",
+      "The model is an ideal language model."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -849,7 +850,7 @@ window.RSAI_QUESTIONS = [
     "id": 51,
     "week": 5,
     "source": "assignment",
-    "question": "What phenomenon occurs when fine-tuning all parameters of an LLM to remove bias, leading to a drop in general performance?",
+    "question": "What phenomenon occurs when fine-tuning all parameters of a large language model (LLM) to remove bias, leading to a drop in general performance?",
     "options": [
       "Model Drifting",
       "Catastrophic Forgetting",
@@ -867,10 +868,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is Counterfactual Data Augmentation (CDA)?",
     "options": [
-      "Re-balancing a corpus by swapping bias attribute words in a dataset",
-      "Adding more stereotypical sentences to a dataset to make it more biased",
-      "Removing all bias-attributed words in a dataset",
-      "Ensuring the dataset has an equal number of biased and unbiased samples"
+      "Re-balancing a corpus by swapping bias attribute words in a dataset.",
+      "Adding more stereotypical sentences to a dataset to make it more biased.",
+      "Removing all bias-attributed words in a dataset.",
+      "Ensuring the dataset has an equal number of biased and unbiased samples."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -897,12 +898,12 @@ window.RSAI_QUESTIONS = [
     "id": 54,
     "week": 5,
     "source": "assignment",
-    "question": "Match the prompt variation:\ni. The image shows a subject with the occupation 'CEO'. Based on the image, what is the gender? (a) male (b) female (c) no preference\nii. Looking at this image alone, who would you hire as CEO? (a) person in image (b) someone else (c) no preference",
+    "question": "Match the following example to the correct prompt variation. i. The image shows a subject with the occupation 'Chief Executive Officer'. Based on the image and this information, what is the gender of the person? (a) male (b) female (c) no preference ii. Looking at this image alone, who would you hire to be the CEO of a Fortune 500 company? (a) person in the image (b) someone else (c) no preference",
     "options": [
-      "i → Informed, ii → Informed",
-      "i → Informed, ii → Blind",
-      "i → Blind, ii → Informed",
-      "i → Blind, ii → Blind"
+      "i -> Informed, ii -> Informed",
+      "i -> Informed, ii -> Blind",
+      "i -> Blind, ii ->Informed",
+      "i -> Blind, ii -> Blind"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -952,17 +953,14 @@ window.RSAI_QUESTIONS = [
     "id": 57,
     "week": 5,
     "source": "assignment",
-    "question": "Calculate the PMI between identity label wᵢ and descriptive word wⱼ given: N=1000 total docs, wᵢ appears in 100 docs, wⱼ in 50 docs, both co-occur in 20 docs.",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "answer": 1,
+    "question": "You are performing a bias audit on a corpus with N = 1000 total documents. Calculate the PMI between an identity label w? and a specific descriptive word w?. The identity label appears in 100 documents. The descriptive word appears in 50 documents. Both words co-occur in the same document 20 times.",
+    "options": [],
+    "answer": 2,
     "multiSelect": false,
     "explanation": "PMI = log(P(wᵢ,wⱼ)/(P(wᵢ)×P(wⱼ))) = log((20/1000)/((100/1000)×(50/1000))) = log(0.02/0.005) = log(4) = 2.",
-    "year": 2026
+    "year": 2026,
+    "type": "numeric",
+    "numeric": true
   },
   {
     "id": 58,
@@ -986,10 +984,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the \"Gender-bleached\" input method used for?",
     "options": [
-      "To remove all images containing humans from the training set",
-      "To study societal bias in generated output by providing input that blurs gender",
-      "To increase the 'Neutral' accuracy above the random baseline",
-      "To ensure the model can only identify objects rather than social attributes"
+      "To remove all images containing humans from the training set.",
+      "To study societal bias in generated output by providing input that blurs gender.",
+      "To increase the \"Neutral\" accuracy above the random baseline.",
+      "To ensure the model can only identify objects rather than social attributes."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1002,10 +1000,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the main goal of the COBIAS framework when assessing bias?",
     "options": [
-      "To automatically remove all stereotypical words from a model's training data",
-      "To increase the speed at which a model generates text by reducing word count",
-      "To ensure that models only use gender-neutral pronouns in every conversation",
-      "To evaluate how much a model relies on specific contexts before deciding if a statement is truly biased"
+      "To automatically remove all stereotypical words from a model's training data.",
+      "To increase the speed at which a model generates text by reducing the number of words used.",
+      "To ensure that models only use gender-neutral pronouns like \"they\" in every conversation.",
+      "To evaluate how much a model relies on specific contexts before deciding if a statement is truly biased."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1016,12 +1014,12 @@ window.RSAI_QUESTIONS = [
     "id": 61,
     "week": 6,
     "source": "assignment",
-    "question": "Why would standard cryptographic solutions be unsuitable for AI model privacy? (Select all that apply.)",
+    "question": "According to the lecture, why would standard cryptographic solutions be unsuitable for AI model privacy? (Select all that apply.)",
     "options": [
-      "It is unclear whether all complex functions can be effectively evaluated in the encryption space",
-      "Evaluation in encrypted space is computationally expensive",
-      "As the model scales, cryptographic keys become impossible to manage",
-      "Encryption models cannot be used for binary classification tasks"
+      "It is unclear whether all complex functions can be effectively evaluated from in the encryption space.",
+      "Evaluation in encrypted space is computationally expensive.",
+      "As the model scales, cryptographic keys become impossible to manage.",
+      "Encryption models cannot be used for binary classification tasks."
     ],
     "answer": [
       0,
@@ -1035,12 +1033,12 @@ window.RSAI_QUESTIONS = [
     "id": 62,
     "week": 6,
     "source": "assignment",
-    "question": "Why might a trained binary classification model still pose a privacy risk even if the raw data is not directly released?",
+    "question": "In the context of healthcare data, why might a trained binary classification model still pose a privacy risk even if the raw data is not directly released?",
     "options": [
-      "The model weights occupy too much storage space",
-      "Binary classifiers are inherently less secure than multi-class ones",
-      "An adversary can reverse-engineer sensitive training data",
-      "The labels used for training are usually public knowledge"
+      "The model weights occupy too much storage space.",
+      "Binary classifiers are inherently less secure than multi-class ones.",
+      "An adversary can reverse-engineer sensitive training data.",
+      "The labels used for training are usually public knowledge."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1053,10 +1051,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How were users able to deanonymize the \"anonymized\" Netflix dataset?",
     "options": [
-      "By obtaining the meta-data of the dataset",
-      "By brute-forcing the sparse matrix to reveal the missing entries",
-      "By using cryptanalytic attacks to decode user information",
-      "By using an auxiliary public database, such as IMDb, to correlate ratings"
+      "By obtaining the meta-data of the dataset.",
+      "By brute-forcing the sparse matrix to reveal the missing entries.",
+      "By using cryptanalytic attacks to decode user information.",
+      "By using an auxiliary public database, such as IMDb, to correlate ratings."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1067,7 +1065,7 @@ window.RSAI_QUESTIONS = [
     "id": 64,
     "week": 6,
     "source": "assignment",
-    "question": "In the randomized response algorithm, what is the minimum probability that the truthful answer is revealed?",
+    "question": "In the randomized response algorithm presented in the lecture, what is the minimum probability that the truthful answer is revealed?",
     "options": [
       "10%",
       "25%",
@@ -1083,12 +1081,13 @@ window.RSAI_QUESTIONS = [
     "id": 65,
     "week": 6,
     "source": "assignment",
-    "question": "To maximize utility, how should the privacy parameter ε be adjusted?",
+    "question": "To maximize utility, how should the privacy parameter be adjusted?",
     "options": [
-      "ε should be maximum for privacy, ε should be minimum for utility",
-      "ε should be minimum for privacy, ε should be minimum for utility",
-      "ε should be maximum for privacy, ε should be maximum for utility",
-      "ε should be minimum for privacy, ε should be maximum for utility"
+      "should be maximum for privacy, should be minimum for utility",
+      "should be minimum for privacy, should be minimum for utility",
+      "should be maximum for privacy, should be maximum for utility",
+      "should be minimum for privacy, should be maximum for utility",
+      "is unrelated"
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1099,17 +1098,14 @@ window.RSAI_QUESTIONS = [
     "id": 66,
     "week": 6,
     "source": "assignment",
-    "question": "100 people surveyed with randomized response (ε=0.5). 60 said 'Yes', 40 said 'No'. Estimate the true number of 'Yes' answers. (Round to nearest whole number.)",
-    "options": [
-      "72",
-      "80",
-      "91",
-      "55"
-    ],
-    "answer": 2,
+    "question": "An organization surveys 100 people and asks whether they voted for a certain party. To protect respondents' privacy, the organization uses the randomized response technique with ? = 0.5. Out of 100 respondents, 60 reported \"Yes\" and 40 reported \"No.\" Estimate the true number of people whose actual answer was \"Yes\". Round to the nearest whole number.",
+    "options": [],
+    "answer": 91,
     "multiSelect": false,
     "explanation": "Using the randomized response formula with ε=0.5, the estimated true count is approximately 91.",
-    "year": 2026
+    "year": 2026,
+    "type": "numeric",
+    "numeric": true
   },
   {
     "id": 67,
@@ -1131,12 +1127,12 @@ window.RSAI_QUESTIONS = [
     "id": 68,
     "week": 6,
     "source": "assignment",
-    "question": "In the Laplace Mechanism, how is the sensitivity (Δ) defined for a function f?",
+    "question": "In the Laplace Mechanism, how is the sensitivity () defined for a function ?",
     "options": [
-      "The average difference between f(X) and f(X') for all neighbouring X and X'",
-      "The maximum absolute difference between f(X) and f(X') for any two neighboring X and X'",
-      "The standard deviation of the function f",
-      "The minimum difference between f(X) and f(X') for any two neighboring X and X'"
+      "The average difference between () and (') for all neighbouring and '.",
+      "The maximum absolute difference between () and (') for any two neighboring and '.",
+      "The standard deviation of the function .",
+      "The minimum difference between () and (') for any two neighboring and '."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1147,12 +1143,12 @@ window.RSAI_QUESTIONS = [
     "id": 69,
     "week": 6,
     "source": "assignment",
-    "question": "According to Cynthia Dwork's definition of ε-differential privacy, the ratio Pr(M(X) ∈ S)/Pr(M(X') ∈ S) is at most:",
+    "question": "According to Cynthia Dwork's definition of -differential privacy, for all neighbouring datasets and ', the probability that a mechanism on generates an output in subset divided by the probability that a mechanism on ' generates an output in subset is at most:",
     "options": [
-      "e^ε",
-      "ε",
-      "1/ε",
-      "ε^e"
+      "",
+      "",
+      "1/",
+      ""
     ],
     "answer": 0,
     "multiSelect": false,
@@ -1163,12 +1159,12 @@ window.RSAI_QUESTIONS = [
     "id": 70,
     "week": 6,
     "source": "assignment",
-    "question": "What property of neighboring datasets X and X' is used to prove the privacy guarantee of Randomized Response?",
+    "question": "What property of neighboring data sets and ' is used to prove the privacy guarantee of Randomized Response?",
     "options": [
-      "They have zero correlation",
-      "They differ by 99% of the elements in the set",
-      "They are disjoint sets",
-      "They differ by only one element"
+      "They have zero correlation.",
+      "They differ by 99% of the elements in the set.",
+      "They are disjoint sets.",
+      "They differ by only one element."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1179,12 +1175,12 @@ window.RSAI_QUESTIONS = [
     "id": 71,
     "week": 6,
     "source": "assignment",
-    "question": "For a fixed ε, if a function being computed is highly sensitive (large Δ), how does it affect the noise added in the Laplace mechanism?",
+    "question": "For a fixed , if a function being computed is highly sensitive (large ), how does it affect the noise added to the Laplace mechanism?",
     "options": [
-      "Less noise is added",
-      "More noise is added",
-      "The noise remains unchanged",
-      "Noise is irrelevant"
+      "Less noise is added.",
+      "More noise is added.",
+      "The noise remains unchanged.",
+      "Noise is irrelevant."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1195,12 +1191,12 @@ window.RSAI_QUESTIONS = [
     "id": 72,
     "week": 6,
     "source": "assignment",
-    "question": "Comparing the Laplace mechanism and randomized response, how does the required number of respondents n differ to achieve the same privacy–utility trade-off?",
+    "question": "Comparing the Laplace mechanism and randomized response, how does the required number of respondents differ to achieve the same privacy�utility trade-off?",
     "options": [
-      "The Laplace mechanism requires quadratically more people",
-      "The Laplace mechanism requires quadratically fewer people",
-      "Both require the same number of people",
-      "The number of people to survey does not matter"
+      "The Laplace mechanism requires quadratically more people.",
+      "The Laplace mechanism requires quadratically fewer people.",
+      "Both require the same number of people.",
+      "The number of people to survey does not matter."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1211,12 +1207,12 @@ window.RSAI_QUESTIONS = [
     "id": 73,
     "week": 7,
     "source": "assignment",
-    "question": "In Approximate Differential Privacy, what does δ represent?",
+    "question": "In Approximate Differential Privacy, what does represent?",
     "options": [
-      "The strict upper bound of the probability of the mechanism M",
-      "The estimated noise added to the Laplace Mechanism",
-      "The average difference between all data points in datasets X and X'",
-      "A leeway for small-probability events where ε-differential privacy may fail"
+      "The strict upper bound of the probability of the mechanism .",
+      "The estimated noise added to the Laplace Mechanism.",
+      "The average difference between all the data points in the datasets and '.",
+      "A leeway for small-probability events where -differential privacy may fail."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1227,12 +1223,12 @@ window.RSAI_QUESTIONS = [
     "id": 74,
     "week": 7,
     "source": "assignment",
-    "question": "Compared to the Laplacian mechanism, how does the Gaussian mechanism scale the noise when releasing D different outputs?",
+    "question": "Compared to the Laplacian mechanism, how does the Gaussian mechanism scale the amount of noise added when releasing D different outputs?",
     "options": [
-      "It adds noise linearly proportional to D",
-      "It adds noise proportional to the square root of D",
-      "It adds noise exponentially proportional to D",
-      "It adds the same amount of noise"
+      "It adds noise linearly proportional to D.",
+      "It adds noise proportional to the square root of D.",
+      "It adds noise exponentially proportional to D.",
+      "It adds the same amount of noise."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1245,10 +1241,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following are properties of Approximate Differential Privacy? (Select all that apply.)",
     "options": [
-      "It satisfies post-processing: any data-independent computation on the output won't make it less (ε,δ)-differentially private",
-      "It guarantees privacy even when δ is significantly larger than 1/n",
-      "It satisfies composition: k (ε,δ)-DP mechanisms combine to (kε,kδ)-DP",
-      "It guarantees output distributions are completely identical for any two neighboring datasets"
+      "It satisfies the property of post-processing, meaning any data-independent computation applied to the output will not make it less (, )-differentially private.",
+      "It guarantees privacy even when is significantly larger than 1/ (where is the number of individuals in a dataset).",
+      "It satisfies composition, meaning if you have mechanisms that are all (, ) -differentially private, then the combined mechanism is (, )-differentially private.",
+      "It guarantees that the output distributions of the algorithm are completely identical for any two neighboring datasets."
     ],
     "answer": [
       0,
@@ -1262,12 +1258,12 @@ window.RSAI_QUESTIONS = [
     "id": 76,
     "week": 7,
     "source": "assignment",
-    "question": "What is the primary advantage of using the Gaussian Mechanism?",
+    "question": "According to the lecture, what is the primary advantage of using the Gaussian Mechanism?",
     "options": [
-      "Zero chance of privacy leakage",
-      "Faster computational time for calculating probabilities",
-      "Better utility due to adding quadratically less noise",
-      "Eliminates the need for a trusted curator"
+      "Zero chance of privacy leakage.",
+      "Faster computational time for calculating probabilities.",
+      "Better utility due to adding quadratically less noise.",
+      "Eliminates the need for a trusted curator."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1278,28 +1274,25 @@ window.RSAI_QUESTIONS = [
     "id": 77,
     "week": 7,
     "source": "assignment",
-    "question": "Three buyers with valuations 15, 20, and 135. What is the absolute difference in revenue when price changes from 14 to 18?",
-    "options": [
-      "4",
-      "6",
-      "8",
-      "10"
-    ],
-    "answer": 1,
+    "question": "There are three buyers whose valuations are 15, 20, and 135, respectively. What is the absolute difference in revenue when the price of a digital good changes from 14 to 18? (Round your answer to the nearest whole number.)",
+    "options": [],
+    "answer": 6,
     "multiSelect": false,
     "explanation": "At price 14: all 3 buy → revenue 42. At price 18: 2 buy → revenue 36. Difference = 6.",
-    "year": 2026
+    "year": 2026,
+    "type": "numeric",
+    "numeric": true
   },
   {
     "id": 78,
     "week": 7,
     "source": "assignment",
-    "question": "How does the Exponential Mechanism select a price h ∈ H?",
+    "question": "How does the Exponential Mechanism select a price ?",
     "options": [
-      "With probability proportional to the inverse of the price",
-      "With probability proportional to e^(ε/(2Δ) × S(x,h))",
-      "With probability proportional to e^(δ/(2ε) × S(x,h))",
-      "Uniformly at random from all prices below the maximum valuation"
+      "With probability proportional to the inverse of the price. (, ) 2",
+      "With probability proportional to . (, ) 2",
+      "With probability proportional to .",
+      "Uniformly at random from all prices below the maximum valuation."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1312,8 +1305,8 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What privacy guarantee does the Exponential Mechanism provide for buyers' valuations?",
     "options": [
-      "(ε,δ)-Differential Privacy",
-      "ε-Differential Privacy",
+      "(, )-Differential Privacy",
+      "-Differential Privacy",
       "K-Anonymity",
       "Concentrated Differential Privacy"
     ],
@@ -1328,10 +1321,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the utility guarantee provided by the Exponential Mechanism?",
     "options": [
-      "It guarantees the absolute highest possible revenue every time",
-      "It does not guarantee positive revenue every time",
-      "It guarantees that the revenue will not be significantly lower than the optimal revenue",
-      "The guarantee will exactly match the median valuation"
+      "It guarantees the absolute highest possible revenue every time.",
+      "It does not guarantee positive revenue every time.",
+      "It guarantees that the revenue will not be significantly lower than the optimal revenue.",
+      "The guarantee will exactly match the median valuation."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1342,7 +1335,7 @@ window.RSAI_QUESTIONS = [
     "id": 81,
     "week": 7,
     "source": "assignment",
-    "question": "In Statistical Parity, for a protected group C and a classifier M, what is the parity value for an ideal classifier?",
+    "question": "In Statistical Parity, for a protected group and a classifier , what is the parity value for an ideal classifier?",
     "options": [
       "-1",
       "0",
@@ -1358,12 +1351,12 @@ window.RSAI_QUESTIONS = [
     "id": 82,
     "week": 7,
     "source": "assignment",
-    "question": "According to the data comparing White and African American defendants in risk assessments, which statements are true? (Select all that apply.)",
+    "question": "According to the data comparing White and African American defendants in risk assessments, which of the following statements are true? (Select all that apply.)",
     "options": [
-      "White defendants were labeled lower risk yet did re-offend at a higher rate",
-      "African American defendants were labeled higher risk but didn't re-offend at a higher rate",
-      "White defendants had a higher rate of being labeled higher risk without re-offending",
-      "African American defendants had a lower rate of being labeled lower risk yet re-offending compared to White defendants"
+      "White defendants were labeled lower risk yet did re-offend at a higher rate than African American defendants.",
+      "African American defendants were labeled higher risk but didn't re-offend at a higher rate than White defendants.",
+      "White defendants had a higher rate of being labeled higher risk without re-offending than African American defendants.",
+      "African American defendants had a lower rate of being labeled lower risk yet re-offending compared to White defendants."
     ],
     "answer": [
       0,
@@ -1378,7 +1371,7 @@ window.RSAI_QUESTIONS = [
     "id": 83,
     "week": 7,
     "source": "assignment",
-    "question": "Based on the analysis of biases in word embeddings, which profession was associated with sexist prejudice towards men?",
+    "question": "Based on the analysis of biases in word embeddings from Wikipedia and Social Media, which of the following professions was associated with sexist prejudice towards men?",
     "options": [
       "Nurse",
       "Teacher",
@@ -1394,7 +1387,7 @@ window.RSAI_QUESTIONS = [
     "id": 84,
     "week": 7,
     "source": "assignment",
-    "question": "The goal of Fair PCA is to find a PCA solution U=[U_A, U_B] such that the reconstruction losses of groups A and B are:",
+    "question": "The goal of Fair PCA is to find a PCA solution = [ , ] such that the reconstruction losses of groups A and B (where A is the protected group) are:",
     "options": [
       "Equal",
       "Unequal",
@@ -1412,10 +1405,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Which of the following best describes Pixel Attribution Methods?",
     "options": [
-      "They compress neural network layers to reduce model size",
-      "They automatically remove backdoor triggers from poisoned datasets",
-      "They convert text datasets directly into image representations",
-      "They highlight pixels that were relevant for a certain image classification"
+      "They compress neural network layers to reduce model size.",
+      "They automatically remove backdoor triggers from poisoned datasets.",
+      "They convert text datasets directly into image representations.",
+      "They highlight pixels that were relevant for a certain image classification."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1444,10 +1437,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What should happen to a saliency map if a model that genuinely captures higher-level class concepts has its layers randomized?",
     "options": [
-      "The map should invert its colors",
-      "The map should remain identical",
-      "The map should change significantly",
-      "The map should become a blank image"
+      "The map should invert its colors.",
+      "The map should remain identical.",
+      "The map should change significantly.",
+      "The map should become a blank image."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1460,10 +1453,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How can we validate the explanations given by LIME? (Select all that apply.)",
     "options": [
-      "By using prior knowledge",
-      "By randomizing the model's layers",
-      "By using human annotators",
-      "By applying adversarial perturbations"
+      "By using prior knowledge.",
+      "By randomizing the model's layers.",
+      "By using human annotators.",
+      "By applying adversarial perturbations."
     ],
     "answer": [
       0,
@@ -1477,7 +1470,7 @@ window.RSAI_QUESTIONS = [
     "id": 89,
     "week": 8,
     "source": "assignment",
-    "question": "Which interpretability approach involves locating information in a model without fully understanding how it is processed?",
+    "question": "Which of the following interpretability approaches involves locating information in a model without fully understanding how it is processed?",
     "options": [
       "Mechanistic interpretability",
       "Top-down interpretability",
@@ -1495,10 +1488,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the primary function of probing in interpretability?",
     "options": [
-      "To inject hidden trojans into public datasets during training",
+      "To inject hidden trojans into public datasets during training.",
       "To check whether representations encode information reliably",
       "To optimize latent space interpolation for image generation",
-      "To completely reverse-engineer all node-to-node algorithmic connections"
+      "To completely reverse-engineer all node-to-node algorithmic connections in large language models."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1528,12 +1521,12 @@ window.RSAI_QUESTIONS = [
     "id": 92,
     "week": 8,
     "source": "assignment",
-    "question": "In the LIME equation, what do L and Ω(g) represent?",
+    "question": "Consider the following equation for LIME: What do the components and () represent?",
     "options": [
-      "L measures unfaithfulness of explanation model g in approximating f locally; Ω(g) measures complexity/interpretability penalty",
-      "L represents global accuracy of black-box model f; Ω(g) represents total convolutional layers",
-      "L is the adversarial perturbation budget; Ω(g) is the learning rate of the surrogate model",
-      "L calculates exact Shapley values; Ω(g) computes the gradient w.r.t. input pixels"
+      "measures how unfaithful the explanation model is in approximating locally (weighted by , while () measures the complexity/interpretability penalty of the explanation model.",
+      "represents the global accuracy of the black-box model , and () represents the total number of convolutional layers.",
+      "is the adversarial perturbation budget, and () is the learning rate of the surrogate model.",
+      "calculates the exact Shapley values, and () computes the gradient with respect to input pixels."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -1562,10 +1555,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does top-down interpretability differ from mechanistic interpretability?",
     "options": [
-      "Top-down focuses on algorithmic node-to-node connections; mechanistic looks at global activity",
-      "Top-down localizes information in a model and looks at representational spaces; mechanistic reverse-engineers neural networks at the neuron level",
-      "Top-down requires full mathematical proof of model weights; mechanistic is entirely model-agnostic",
-      "Top-down only applies to text saliency maps; mechanistic only applies to GANs"
+      "Top-down focuses on algorithmic node-to-node connections, whereas mechanistic looks at global activity of populations of neurons.",
+      "Top-down localizes information in a model and looks at representational spaces, while mechanistic attempts to reverse-engineer neural networks at the neuron level.",
+      "Top-down requires full mathematical proof of model weights, whereas mechanistic is entirely model-agnostic.",
+      "Top-down can only be applied to text-based saliency maps, whereas mechanistic only applies to GANs."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1592,12 +1585,12 @@ window.RSAI_QUESTIONS = [
     "id": 96,
     "week": 8,
     "source": "assignment",
-    "question": "Regarding LIME and SHAP, which statements are true? (Select all that apply.)",
+    "question": "Regarding LIME and SHAP, which of the following statements are true? (Select all that apply.)",
     "options": [
-      "They generate global explanations that apply uniformly across the entire dataset",
-      "They are model-agnostic methods that can work on any black-box model",
-      "They are restricted solely to image datasets",
-      "They can be computationally expensive compared to direct gradient-based visualizations"
+      "They generate global explanations that apply uniformly across the entire dataset.",
+      "They are model-agnostic methods that can work on any black-box model.",
+      "They are restricted solely to image datasets and cannot handle natural language data.",
+      "They can be computationally expensive to compute compared to direct gradient-based visualizations."
     ],
     "answer": [
       1,
@@ -1613,10 +1606,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the difference between \"vertical\" and \"horizontal\" AI regulation?",
     "options": [
-      "Vertical regulates hardware, horizontal regulates software",
-      "Vertical is market-based, horizontal is purely state-controlled",
-      "Vertical applies existing sector-specific laws to AI; horizontal creates broad new risk-based laws across all sectors",
-      "Vertical only applies to industry; horizontal applies to industry and customers"
+      "Vertical regulates the hardware, while horizontal regulates the software.",
+      "Vertical regulation is completely market-based, while horizontal is purely state-controlled.",
+      "Vertical regulation applies existing sector-specific laws to AI, while horizontal regulation creates broad, new risk-based laws across all sectors.",
+      "Vertical regulation only applies to the industry, while horizontal applies to the industry and its customers."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1627,12 +1620,12 @@ window.RSAI_QUESTIONS = [
     "id": 98,
     "week": 9,
     "source": "assignment",
-    "question": "Why is data privacy considered a better-understood guardrail compared to model explainability?",
+    "question": "Why is data privacy considered a relatively better-understood guardrail compared to model explainability?",
     "options": [
-      "Explainability has exact mathematical bounds, whereas privacy cannot be measured mathematically",
-      "Privacy can be controlled by improving the model's accuracy",
-      "Privacy can be formally bounded and guaranteed with mathematical frameworks",
-      "There are far less constraints in ensuring data privacy than explainability"
+      "Explainability has exact mathematical bounds, whereas privacy cannot be measured mathematically.",
+      "Privacy can be controlled by improving the model's accuracy, while explainability depends mainly on the size of the training dataset.",
+      "Privacy can be formally bounded and guaranteed with mathematical frameworks.",
+      "There are far less constraints in ensuring data privacy than explainability."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1643,12 +1636,12 @@ window.RSAI_QUESTIONS = [
     "id": 99,
     "week": 9,
     "source": "assignment",
-    "question": "As AI systems become autonomous agents, what is the main trade-off regarding human decision-making?",
+    "question": "According to the lecture, as AI systems become autonomous agents capable of performing complex tasks independently, what is the main trade-off that occurs regarding human decision-making.",
     "options": [
-      "Individual human agency decreases as decision-making is delegated to autonomous AI systems",
-      "Human decision-making increases because AI provides more recommendations",
-      "Human agency remains unchanged because AI only performs tasks without affecting decisions",
-      "Human decision-making becomes more reliable because AI eliminates uncertainty"
+      "Individual human agency decreases as decision-making is delegated to autonomous AI systems.",
+      "Human decision-making increases because autonomous AI agents provide more information and recommendations to users.",
+      "Human agency remains unchanged because autonomous AI systems only perform tasks without affecting human decisions.",
+      "Human decision-making becomes more reliable because AI agents completely eliminate uncertainty and errors from the decision-making process."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -1678,12 +1671,12 @@ window.RSAI_QUESTIONS = [
     "id": 101,
     "week": 9,
     "source": "assignment",
-    "question": "What defines a \"co-regulation\" model from strict-regulation or self-regulation?",
+    "question": "In structured AI governance, what is defines a \"co-regulation\" model from from strict-regulation or self-regulation?",
     "options": [
-      "Companies operate without external guidelines or government interaction",
-      "The government directly dictates every policy without interference from industry",
-      "The government ensures consumers have as much responsibility as companies",
-      "Industries establish policies which are formally recognized and enforced by the government"
+      "Companies operate without zero external guidelines or government interaction.",
+      "The government directly dictates every policy of code without interference from the industry.",
+      "The government ensures that consumers have as much responsiblities as companies to follow policy.",
+      "Industries establish policies which are formally recognized and enforced by the government."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1694,12 +1687,12 @@ window.RSAI_QUESTIONS = [
     "id": 102,
     "week": 9,
     "source": "assignment",
-    "question": "If copyrighted data is found inside a large AI model and must be removed, what is a major technical challenge?",
+    "question": "According to the lecture, if copyrighted data is found inside a large AI model and must be removed, what is a major technical challenge?",
     "options": [
-      "Removing the data may significantly reduce generalization to unrelated tasks",
-      "The model may need retraining or specialized unlearning techniques",
-      "The model may become unstable because removing one data point changes its entire architecture",
-      "The model may require additional training on the copyrighted data before removal"
+      "Removing the data may significantly reduce the model's ability to generalize to unrelated tasks.",
+      "The model may need to be retrained or use specialized unlearning techniques to remove the data's influence.",
+      "The model may become unstable because removing one data point automatically changes its entire architecture.",
+      "The model may require additional training on the copyrighted data before its influence can be safely removed."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1710,10 +1703,10 @@ window.RSAI_QUESTIONS = [
     "id": 103,
     "week": 9,
     "source": "assignment",
-    "question": "About how much of an AI model's development budget should be spent on safety and responsible AI?",
+    "question": "According to the discussed AI safety and governance proposals, about how much of an AI model's development budget should be spent on safety and responsible AI?",
     "options": [
       "50% on legal costs",
-      "100% on testing after release",
+      "100% on testing the model after it is released",
       "10% on AI safety and responsible AI research",
       "All profits on building newer hardware"
     ],
@@ -1726,12 +1719,12 @@ window.RSAI_QUESTIONS = [
     "id": 104,
     "week": 9,
     "source": "assignment",
-    "question": "Which technical strategy helps reduce the energy consumption and environmental footprint of LLM deployment?",
+    "question": "According to the lecture, which technical strategy help reduce the energy consumption and environmental footprint of LLM deployment?",
     "options": [
-      "Routing every simple query to ultra-large GPU clusters in real time",
-      "Increasing parameter counts by 10x for routine classification tasks",
-      "Running duplicate backup models continuously on solar-powered data centers",
-      "Moving model inference to run on CPUs/Edge devices instead of GPUs"
+      "Routing every simple text query to ultra-large GPU clusters in real time.",
+      "Increasing parameter counts by 10x for routine classification tasks.",
+      "Running duplicate backup models continuously on solar-powered data centers.",
+      "Moving model inference to run on CPUs/Edge devices instead of GPUs."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1744,10 +1737,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does Back Translation Defense mitigate jailbreak attacks?",
     "options": [
-      "It takes unmoderated model output, reverse-infers the prompt, and runs it through safety filters",
-      "It translates outputs into multiple languages until a syntax error occurs",
-      "It automatically rejects any prompt exceeding the model's maximum context window",
-      "It re-encrypts the LLM's weights after every user interaction"
+      "It takes an unmoderated model output, reverse-infers the prompt that generated it, and runs it through safety filters.",
+      "It translates outputs into multiple foreign languages until a syntax error occurs.",
+      "It automatically rejects any prompt containing more words than the model's maximum context window.",
+      "It re-encrypts the LLM's weights after every user interaction."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -1781,10 +1774,10 @@ window.RSAI_QUESTIONS = [
     "id": 107,
     "week": 9,
     "source": "assignment",
-    "question": "In the Fairness Tree Framework, which metric is recommended when interventions are punitive and you want predictive equity among people for whom intervention is taken?",
+    "question": "According to the Fairness Tree Framework, which fairness metric is recommended when interventions are punitive and you are most concerned with ensuring predictive equity among people for whom intervention is taken?",
     "options": [
       "FN/GS Parity",
-      "FP/GS Parity",
+      "FP/GS Pairty",
       "FDR Parity",
       "FPR Parity"
     ],
@@ -1797,7 +1790,7 @@ window.RSAI_QUESTIONS = [
     "id": 108,
     "week": 9,
     "source": "assignment",
-    "question": "In the systems approach framework for AI design, what action immediately follows analyzing the root causes of bias?",
+    "question": "According to the systems approach framework for AI design and development, what action immediately follows the step of analyzing the root causes of bias?",
     "options": [
       "Measure and detect the bias",
       "Mitigate the impact through adjusting interventions",
@@ -1813,12 +1806,12 @@ window.RSAI_QUESTIONS = [
     "id": 109,
     "week": 10,
     "source": "assignment",
-    "question": "Why is black-box access considered insufficient for conducting rigorous AI auditing?",
+    "question": "According to the lecture, why is black-box access considered insufficient for conducting rigorous AI auditing?",
     "options": [
-      "It restricts evaluation to only the utilization of computation",
-      "It focuses only on the final outputs rather than internal mechanisms",
-      "It fails to reveal underlying problematic model behaviour",
-      "It requires auditors to retrain the underlying weights from scratch"
+      "It restricts evaluation to only the utilization of computation.",
+      "It focuses only on the final outputs rather than the internal mechanisms.",
+      "It fails to reveal underlying problematic model behaviour.",
+      "It requires the auditors to retrain the underlying weights from scratch."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1831,10 +1824,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does \"goal misgeneralization\" differ from \"reward hacking\"?",
     "options": [
-      "The agent pursues a different goal that is merely correlated with the true reward function",
-      "The agent continuously optimizes an imperfect proxy goal",
-      "The agent actively manipulates its own code to rewrite the target goal",
-      "The agent randomly pursues a completely new, unpredictable behaviour in deployment"
+      "The agent pursues a different goal that is merely correlated with the true reward function.",
+      "The agent continuously optimizes an imperfect proxy goal, worsening the outcomes.",
+      "The agent actively manipulates its own code to rewrite the target goal.",
+      "The agent randomly pursues a completely new, unpredictable behvaiour is deployment."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -1845,12 +1838,12 @@ window.RSAI_QUESTIONS = [
     "id": 111,
     "week": 10,
     "source": "assignment",
-    "question": "Which characteristic of highly agentic AI systems could introduce severe safety concerns beyond those of current language models?",
+    "question": "Which of the following characteristics of highly agentic AI systems could introduce severe safety concerns beyond those of current language models?",
     "options": [
-      "High parameter count and dense multi-head attention",
-      "Increased speed of token generation in text",
-      "Exploding context window expansion",
-      "Direct interaction with external digital infrastructure"
+      "High parameter count and dense multi-head attention.",
+      "Increased speed of token generation in text.",
+      "Exploding context window expansion.",
+      "Direct interaction with external digital infrastructure."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1863,10 +1856,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Why are benchmarks insufficient for assessing dangerous capabilities in current models?",
     "options": [
-      "Benchmarks fail to capture emergent behaviours in a tool-based environment",
-      "Benchmarks require white-box parameter access to accurately test models",
-      "Benchmarks are only able to accurately assess image models",
-      "Benchmarks cannot measure basic mathematical computation accuracy"
+      "Benchmarks fail to capture emergent behaviours in a tool-based environment.",
+      "Benchmarks require white-box parameter access to accurately test models.",
+      "Benchmarks are only able to accurately assess image models and not language models.",
+      "Benchmarks cannot measure basic mathematical computation accuracy."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -1877,12 +1870,12 @@ window.RSAI_QUESTIONS = [
     "id": 113,
     "week": 10,
     "source": "assignment",
-    "question": "Instead of relying on third-party audits, what alternative approach can developers use to demonstrate model safety before deployment?",
+    "question": "Instead of relying on third-party audits, what alternative approach can developers use to demonstrate that a model is safe before deployment?",
     "options": [
-      "Deploying models in restricted sandbox environments",
-      "Releasing complete source code and model weights to the public",
-      "Providing a positive case demonstrating that the system is safe",
-      "Mandating that all training be physically monitored by the public"
+      "Deploying models in restricted sandbox environments to observe failure cases.",
+      "Releasing the complete source code and model weights to the public.",
+      "Providing a positive case demonstrating that the system is safe.",
+      "Mandating that all training be physically monitored by the public."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1893,12 +1886,12 @@ window.RSAI_QUESTIONS = [
     "id": 114,
     "week": 10,
     "source": "assignment",
-    "question": "What is a systemic risk of highly capable, personalized AI assistants that adapt to a user's habits?",
+    "question": "What is a systemic risk about highly capable, personalized AI assistants that adapt to a user's habits?",
     "options": [
-      "They will overwrite local user data to optimize performance",
-      "They will fabricate sensitive personal information",
-      "They put dangerous amounts of private information in the hands of a few big companies",
-      "They require localized hardware upgrades funded by the user"
+      "They will overwrite local user data to optimize their performance.",
+      "They will frequently hallucinate and fabricate sensitive personal information or memories.",
+      "They put dangerous amounts of private information in the hands of a few big companies.",
+      "They require localized hardware upgrades that need to be funded by the user."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1909,12 +1902,12 @@ window.RSAI_QUESTIONS = [
     "id": 115,
     "week": 10,
     "source": "assignment",
-    "question": "Why is training models on copyrighted data not considered \"transformative fair use\"?",
+    "question": "According to the lecture, why is training models on copyrighted data not constitute \"transformative fair use\"?",
     "options": [
-      "The models fail to provide accurate citations",
-      "The resulting model directly competes economically with the creators",
-      "The generated outputs are legally indistinguishable from copyrighted data",
-      "The training process stores exact copies of the original works"
+      "The models fail to provide accurate citations for the generated content.",
+      "The resulting model directly competes economically with the creators.",
+      "The generated outputs are legally indistinguishable from the copyrighted data.",
+      "The training process stores exact copies of the original works."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1925,12 +1918,12 @@ window.RSAI_QUESTIONS = [
     "id": 116,
     "week": 10,
     "source": "assignment",
-    "question": "Why might single-nation AI regulations fail to prevent deployment of dangerous AI systems?",
+    "question": "According to the lecture, why might single-nation AI regulations fail to prevent the deployment of dangerous AI systems?",
     "options": [
-      "National regulators lack technical tools to monitor data centers",
-      "Individual nations may have the need to bypass regulations and build dangerous AI",
-      "International copyright laws prevent countries from enforcing safety standards on foreign models",
-      "Private AI companies can legally overturn single-nation safety laws"
+      "National regulators lack the technical tools needed to monitor large computing data centers within their own borders.",
+      "Individual nations may have the need to bypass regulations and build dangerous AI systems anyways.",
+      "International copyright laws prevent individual countries from enforcing safety standards on foreign models.",
+      "Private AI companies can legally overturn single-nation safety laws in international judicial systems."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -1959,10 +1952,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "Why is it dangerous for AI systems to be optimized for user persuasiveness?",
     "options": [
-      "It requires continuous access to quantum compute",
-      "It degrades latency during multi-turn dialogue",
-      "It creates incentives to manipulate human intent",
-      "It prevents models from processing implicit input cues"
+      "It requires continuous access to quantum compute.",
+      "It degrades latency during multi-turn dialogue.",
+      "It creates incentives to manipulate human intent.",
+      "It prevents models from processing implicit or indirect input cues"
     ],
     "answer": 2,
     "multiSelect": false,
@@ -1973,12 +1966,12 @@ window.RSAI_QUESTIONS = [
     "id": 119,
     "week": 10,
     "source": "assignment",
-    "question": "Why is upstream regulation for AI developers better than downstream regulation on users?",
+    "question": "Why is it better to have upstream regulation for companies developing AI systems and hardware than having downstream regulation on the people using the AI systems?",
     "options": [
-      "Developers are completely free of standard regulations",
-      "Developers lack technical control over baseline models",
-      "Users control the underlying training data pipeline",
-      "Users face high market pressure to adopt AI systems"
+      "Developers are completely free of standard regulations.",
+      "Developers lack any technical control over baseline models.",
+      "Users control the underlying training data pipeline.",
+      "Users face high market pressure to adopt AI systems."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -1989,12 +1982,12 @@ window.RSAI_QUESTIONS = [
     "id": 120,
     "week": 10,
     "source": "assignment",
-    "question": "Why is cross-modal capability considered a characteristic of Artificial General Intelligence (AGI)?",
+    "question": "According to the lecture, why is cross-modal capability considered to be a characteristic of Artificial General Intelligence (AGI)?",
     "options": [
-      "Text processing requires higher computational memory",
-      "Multimodal models eliminate risks of hallucinations",
-      "Language models cannot represent abstract reasoning",
-      "Excluding human modalities creates a gap in real-world understanding"
+      "Text processing requires higher computational memory.",
+      "Multimodal models eliminate risks of hallucinations in the outputs.",
+      "Language models cannot represent abstract reasoning.",
+      "Excluding human modalities creates a gap in real-world understanding."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -2005,7 +1998,7 @@ window.RSAI_QUESTIONS = [
     "id": 121,
     "week": 11,
     "source": "assignment",
-    "question": "In data privacy, which right requires companies to delete user data when requested?",
+    "question": "In the context of data privacy, which right requires companies to delete user data when requested?",
     "options": [
       "Right to intellectual property retention",
       "Right to be forgotten",
@@ -2021,7 +2014,7 @@ window.RSAI_QUESTIONS = [
     "id": 122,
     "week": 11,
     "source": "assignment",
-    "question": "Which OECD AI Principle states that AI systems should operate safely under normal use, misuse, or adverse conditions?",
+    "question": "Which OECD AI Principle states that AI systems should operate safely and function properly under normal use, misuse, or adverse conditions?",
     "options": [
       "Inclusive growth, sustainable development and well-being",
       "Transparency and explainability",
@@ -2037,7 +2030,7 @@ window.RSAI_QUESTIONS = [
     "id": 123,
     "week": 11,
     "source": "assignment",
-    "question": "Under the EU AI Act, which application category is classified as 'unacceptable risk'? (Select all that apply.)",
+    "question": "Under the EU AI Act, which application category is classified as an 'unacceptable risk'? (Select all that apply.)",
     "options": [
       "Social Scoring Systems",
       "Critical Infrastructure Management",
@@ -2056,7 +2049,7 @@ window.RSAI_QUESTIONS = [
     "id": 124,
     "week": 11,
     "source": "assignment",
-    "question": "When an email spam server filters malicious messages in the background, which type of threat mitigation is it demonstrating?",
+    "question": "When a system like an email spam server filters out malicious messages in the background without requiring user intervention, which type of threat mitigation is it demonstrating?",
     "options": [
       "Educating and training users",
       "Providing interface-level threat warnings",
@@ -2072,12 +2065,12 @@ window.RSAI_QUESTIONS = [
     "id": 125,
     "week": 11,
     "source": "assignment",
-    "question": "What transparency requirement does the EU AI Act impose on deepfakes or generated media?",
+    "question": "What specific transparency requirement does the EU AI Act impose on deepfakes or generated media?",
     "options": [
-      "They must be exclusively hosted on European-based servers",
-      "They must be clearly labeled as AI-generated",
-      "They must not be published on the internet at all",
-      "They must be heavily taxed before distribution"
+      "They must be exclusively hosted on European-based servers.",
+      "They must be clearly labeled as AI-generated.",
+      "They must not be published on the internet at all.",
+      "They must be heavily taxed before distribution."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2090,10 +2083,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the AI Value Chain, who is considered the \"deployer\"?",
     "options": [
-      "The person or organization that uses the AI systems under its own authority",
-      "The original engineering team that built the AI model",
-      "The individual who imports the AI system into the EU market",
-      "The government official responsible for writing the regulations"
+      "The person or organization that uses the AI systems under its own authority.",
+      "The original engineering team that built the AI model.",
+      "The individual who imports the AI system into the EU market.",
+      "The government official responsible for writing the regulations."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -2104,12 +2097,12 @@ window.RSAI_QUESTIONS = [
     "id": 127,
     "week": 11,
     "source": "assignment",
-    "question": "To satisfy the OECD principle of \"accountability,\" what does traceability help achieve?",
+    "question": "To satisfy the OECD principle of \"accountability,\" AI actors should ensure \"traceability\" throughout the system's lifecycle. What does this specifically help achieve?",
     "options": [
-      "Track user information like IP addresses",
-      "Trace how data was collected and how it influences decision-making",
-      "Guarantee the system uses minimal computing power",
-      "Allow the AI to wipe its training data after a set period"
+      "It allows companies to track user information that can lead to their location, such as IP addresses.",
+      "It ensures one can trace back how data was collected and how it influences decision-making.",
+      "It guarantees the system uses minimal computing power and has a low carbon footprint.",
+      "It allows the AI to completely wipe its training period after a set period."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2122,10 +2115,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the SaGE framework, how is semantic inconsistency functionally defined?",
     "options": [
-      "Failing to identify commonsense reasoning violations within a single prompt",
-      "Generating factually incorrect statements in response to a factual prompt",
-      "Utilizing grammatically disparate structures to answer identical prompts",
-      "Providing semantically disparate answers to semantically equivalent prompts"
+      "Failing to identify commonsense reasoning violations within a single prompt.",
+      "Generating factually incorrect statements in response to a factual prompt.",
+      "Utilizing grammatically disparate structures to answer identical prompts.",
+      "Providing semantically disparate answers to semantically equivalent prompts."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -2138,10 +2131,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "In the SaGE framework, what does a higher semantic graph entropy indicate about the LLM?",
     "options": [
-      "Higher semantic consistency",
-      "Higher semantic inconsistency",
-      "Lower syntactic divergence",
-      "Lower fundamental judgment"
+      "The model is exhibiting higher semantic consistency.",
+      "The model is exhibiting higher semantic inconsistency.",
+      "The model is exhibiting lower syntactic divergence.",
+      "The model is exhibiting lower fundamental judgment."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2152,12 +2145,12 @@ window.RSAI_QUESTIONS = [
     "id": 130,
     "week": 11,
     "source": "assignment",
-    "question": "A developer lowers the generation temperature to reduce contradictory answers to moral questions. Based on SaGE, what is the expected outcome?",
+    "question": "A developer attempts to reduce an LLM's tendency to give contradictory answers to moral questions by lowering the generation temperature. Based on SaGE, what is the expected outcome?",
     "options": [
-      "Consistency score will improve to near perfection",
-      "Consistency score will perfectly match human scores",
-      "Consistency score will drop to near zero",
-      "Consistency score will remain largely unaffected"
+      "The consistency score will improve to near perfection.",
+      "The consistency score will perfectly match human scores.",
+      "The consistency score will drop to near zero.",
+      "The consistency score will remain largely unaffected."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -2168,12 +2161,12 @@ window.RSAI_QUESTIONS = [
     "id": 131,
     "week": 11,
     "source": "assignment",
-    "question": "According to SaGE, how does an LLM's accuracy on commonsense reasoning benchmarks correlate with its moral consistency?",
+    "question": "According to the SaGE framework, how does an LLM's accuracy on standard commonsense reasoning benchmarks correlate with its moral consistency?",
     "options": [
-      "Accuracy negatively correlates with consistency",
-      "Accuracy does not correlate with consistency",
-      "Accuracy strictly correlates with consistency",
-      "Accuracy conditionally correlates with consistency"
+      "Accuracy negatively correlates with consistency.",
+      "Accuracy does not correlate with consistency.",
+      "Accuracy strictly correlates with consistency.",
+      "Accuracy conditionally correlates with consistency."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2184,12 +2177,12 @@ window.RSAI_QUESTIONS = [
     "id": 132,
     "week": 12,
     "source": "assignment",
-    "question": "What does a 'guarded' attribute mean in a language model's representation space?",
+    "question": "What does a `guarded' attribute mean in a language model's representation space?",
     "options": [
-      "The attribute can only be classified by specific linear probes",
-      "The attribute requires non-linear transformations to be classified",
-      "The attribute is heavily emphasized during pre-training",
-      "The attribute is entirely impossible to classify based on the representation"
+      "The attribute can only be classified by specific linear probes.",
+      "The attribute requires non-linear transformations to be classified.",
+      "The attribute is heavily emphasized during the initial pre-training process.",
+      "The attribute is entirely impossible to classify based on the representation."
     ],
     "answer": 3,
     "multiSelect": false,
@@ -2202,10 +2195,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "What is the primary objective of modifying vectors from one distribution (e.g., toxic to non-toxic) to look like another?",
     "options": [
-      "To increase the computational cost of generating toxic content",
-      "To guard an attribute with the smallest possible change to unrelated semantics",
-      "To fundamentally alter the underlying vocabulary of the model",
-      "To completely randomize the vector outputs of specific trigger tokens"
+      "To increase the computational cost of generating toxic content.",
+      "To guard an attribute with the smallest possible change to unrelated semantics.",
+      "To fundamentally alter the underlying vocabulary of the model.",
+      "To completely randomize the vector outputs of specific trigger tokens."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2216,12 +2209,12 @@ window.RSAI_QUESTIONS = [
     "id": 134,
     "week": 12,
     "source": "assignment",
-    "question": "What is the implication behind using Affine Steering?",
+    "question": "According to the lecture, what is the implication behind using Affine Steering?",
     "options": [
-      "It is a no-gradient and cheap way to control model generation",
-      "It fine-tunes the model to remove bias using minimal training data",
-      "It is a highly interpretable, gradient-based optimization method",
-      "It depends heavily on reinforcement learning and human feedback"
+      "It is a no-gradient and cheap way to control model generation.",
+      "It fine-tunes the model to effectively remove bias using minimal training data.",
+      "It is a highly interpretable, gradient-based optimization method.",
+      "It depends heavily on reinforcement learning and human feedback."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -2234,10 +2227,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does the size of a conventional cell complex scale as the size of the graph increases?",
     "options": [
-      "It scales inversely with respect to graph size",
-      "It scales quadratically with respect to graph size",
-      "It scales logarithmically with respect to graph size",
-      "It scales linearly with respect to graph size"
+      "It scales inversely with respect to graph size.",
+      "It scales quadratically with respect to graph size.",
+      "It scales logarithmically with respect to graph size.",
+      "It scales linearly with respect to graph size."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2248,12 +2241,12 @@ window.RSAI_QUESTIONS = [
     "id": 136,
     "week": 12,
     "source": "assignment",
-    "question": "In molecule toxicity detection, why might a standard Graph Neural Network Explainer fail to identify the correct explanation?",
+    "question": "In the molecule toxicity detection task, why might a standard Graph Neural Network Explainer fail to identify the correct explanation?",
     "options": [
-      "It removes all nodes with high edge degree",
-      "It processes node features too slowly for chemical datasets",
-      "It cannot capture specific multi-node groupwise interactions",
-      "It assigns zero weight to all chemical bonds by default"
+      "It removes all nodes that have a high edge degree.",
+      "It processes node features too slowly for a chemical dataset.",
+      "It cannot capture specific multi-node groupwise interactions.",
+      "It assigns zero weight to all the chemical bonds by default."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -2266,10 +2259,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How does FORGE reduce the computational complexity of the cell complex to a linear scale?",
     "options": [
-      "By randomly sampling only 10% of the original graph edges",
-      "By strategically removing specific types of boundary relations",
-      "By deleting all nodes with degree higher than a threshold",
-      "By executing the explainer algorithm on compressed latent space"
+      "By randomly sampling only 10% of the original graph edges.",
+      "By strategically removing specific types of boundary relations.",
+      "By completely deleting all nodes with a degree higher than a threshold degree.",
+      "By executing the explainer algorithm on highly compressed latent space."
     ],
     "answer": 1,
     "multiSelect": false,
@@ -2282,10 +2275,10 @@ window.RSAI_QUESTIONS = [
     "source": "assignment",
     "question": "How are cycles structurally represented in the cell complex?",
     "options": [
-      "They are represented as 0-cells",
-      "They are represented as 1-cells",
-      "They are represented as 2-cells",
-      "They are represented as 3-cells"
+      "They are represented as 0-cells.",
+      "They are represented as 1-cells.",
+      "They are represented as 2-cells.",
+      "They are represented as 3-cells."
     ],
     "answer": 2,
     "multiSelect": false,
@@ -2296,7 +2289,7 @@ window.RSAI_QUESTIONS = [
     "id": 139,
     "week": 12,
     "source": "assignment",
-    "question": "Which of the following are examples of graph explainer applications? (Select all that apply.)",
+    "question": "Which of the following are examples of graph explainers? (Select all that apply.)",
     "options": [
       "Predicting the next token in a language model",
       "Toxicity detection of molecules",
@@ -2317,7 +2310,7 @@ window.RSAI_QUESTIONS = [
     "id": 140,
     "week": 12,
     "source": "assignment",
-    "question": "Which method benefits the most from the FORGE framework?",
+    "question": "Which of the following methods benefits the most from the FORGE framework?",
     "options": [
       "Attention-based methods",
       "Surrogate-based methods",
@@ -2333,13 +2326,13 @@ window.RSAI_QUESTIONS = [
     "id": 141,
     "week": 12,
     "source": "assignment",
-    "question": "Based on cell complex definitions in FORGE, which statements are correct? (Select all that apply.)",
+    "question": "Based on the mathematical definitions of cell complexes presented in the FORGE slides, which of the following statements are correct? (Select all that apply.)",
     "options": [
-      "A 0-cell corresponds to a vertex, while a 1-cell corresponds to an edge in traditional graphs",
-      "The 1-skeleton X^(1) consists exclusively of 1-dimensional cells",
-      "Vertical boundary relations connect two cells of the same dimension sharing a common boundary",
-      "Boundary relations are restricted to be undirected",
-      "A p-cell c^(p) is a face of a (p+1)-cell c^(p+1) if the set of points composing c^(p) is a subset of those composing c^(p+1)"
+      "A 0-cell corresponds to a vertex, while a 1-cell corresponds to an edge in traditional graphs.",
+      "The 1-skeleton (1) of a cell complex consists exclusively of 1-dimensional cells.",
+      "Vertical boundary relations connect two cells of the same dimension that share a common boundary.",
+      "Boundary relations in the framework are restricted to be undirected, meaning = . , , 12 21",
+      "A -cell () is considered a face or boundary of a ( + 1)-cell (+1) if the set of points composing () is a subset of those composing (+1)."
     ],
     "answer": [
       0,
