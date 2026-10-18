@@ -6906,9 +6906,8 @@
     "options": [
       "Equality of Opportunity",
       "Statistical Parity",
-      "Predi-t ve ?a ity",
-      "Indi \"jh#lfair1elis",
-      "You"
+      "Predictive Parity",
+      "Indivisual fairness"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7090,8 +7089,8 @@
     "options": [
       "LIME only works on image data",
       "LIME explanations are locally faithful but not necessarily globally consistent",
-      "LIME requie: #cixe: 5 tr moceI inte rn )l;",
-      "LIM: ;anr \"t tanJl? catecri;4 fex;urcs"
+      "LIME requires access to model internals;",
+      "LIME cannot handle categorical features"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7265,10 +7264,10 @@
     "source": "assignment",
     "question": "In the Accuracy vs. Disparity chart, what represents the Ideal model?",
     "options": [
-      "High accuracy; high disparity",
-      "Low accuracy low disparity",
-      "High 2ccUI JC '0 # ('iiperity",
-      "Moce\";e ~scilray (ico riti: dispatity"
+      "High accuracy, high disparity",
+      "Low accuracy, low disparity",
+      "High accuracy, Low disparity",
+      "Moderate accuracy, Moderate disparity"
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7493,7 +7492,7 @@
       "It has already been fully achieved by current AI models",
       "It is seen as essential for AI to match the full range of human cognitive abilities",
       "It is considered a distraction from the more efficient text-based training methods",
-      "It is believed to hinder progress in AI systems"
+      "It is believed to be the primary cause of bias in AI systems"
     ],
     "answer": 1,
     "multiSelect": false,
@@ -7683,8 +7682,8 @@
     "options": [
       "Developing general guidelines from practical experience.",
       "A method for generating paraphrases",
-      "A ger eral s'ui e 'Jelitie 'cr Irodel trairi ng",
-      "A st atv ticl rreasue cf ifide perfarrnce."
+      "A general guideline for model training",
+      "A statistical measure of model performance."
     ],
     "answer": 0,
     "multiSelect": false,
@@ -7877,8 +7876,8 @@
     "options": [
       "Trojan",
       "Worm",
-      "Swar n",
-      "Bac €c (cr"
+      "Swarm",
+      "Backdoor"
     ],
     "answer": 0,
     "multiSelect": false,
